@@ -4,7 +4,7 @@
  *  Edit this file to update business info, hours, and notices.
  * ============================================================
  */
-window.NIKA_CONFIG = {
+export const config = {
 
   // ----------------------------------------------------------
   //  VACATION / SPECIAL NOTICE BANNER
@@ -67,7 +67,7 @@ window.NIKA_CONFIG = {
         time: { pl: "Zamknięte", en: "Closed", uk: "Зачинено" },
         openHour: null,
         closeHour: null,
-        daysOfWeek: [6,0]
+        daysOfWeek: [6, 0]
       }
     ]
   },
@@ -84,3 +84,14 @@ window.NIKA_CONFIG = {
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.6363495964406!2d19.125681776883184!3d50.81937596073161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5afb1b83635%3A0x84c0d093dc95d3c5!2sNIKA%20wymiana%20oleju%2C%20mechanika!5e0!3m2!1sde!2sde!4v1792503973581!5m2!1sde!2sde"
   }
 };
+
+// Expose on window for backward compatibility
+if (typeof window !== 'undefined') {
+  window.NIKA_CONFIG = config;
+}
+
+// Expose on window for backward compatibility
+if (typeof window !== 'undefined') {
+  window.NIKA_CONFIG = config;
+}
+

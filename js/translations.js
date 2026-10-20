@@ -1,11 +1,10 @@
 /**
  * ============================================================
- *  NIKA AUTOSERWIS - INTERNATIONALISATION (i18n)
+ *  NIKA AUTOSERWIS - TRANSLATION DICTIONARIES  (js/translations.js)
  *  All UI strings for Polish (pl), English (en), Ukrainian (uk).
- *  Consumed by js/app.js via window.NIKA_I18N.
  * ============================================================
  */
-window.NIKA_I18N = {
+export const translations = {
 
   // ============================================================
   //  POLISH
@@ -268,3 +267,9 @@ window.NIKA_I18N = {
     notice_dismiss: "×",
   }
 };
+
+// Fallback for window object if accessed directly
+if (typeof window !== 'undefined') {
+  window.NIKA_I18N = translations;
+}
+
