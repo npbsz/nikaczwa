@@ -878,9 +878,9 @@ p:last-child { margin-bottom: 0; }
 
 .location-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
+  grid-template-columns: 420px 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
 }
 
 /* Hours table */
@@ -955,16 +955,27 @@ p:last-child { margin-bottom: 0; }
 .btn-navigate:active { transform: translateY(0); }
 
 /* Map embed */
-.map-embed {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  height: 420px;
+.location-map,
+.map-embed,
+.map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
 }
 
+.map-embed {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
+  position: relative;
+}
+
+.map-container iframe,
 .map-embed iframe {
   width: 100%;
   height: 100%;
+  min-height: 520px;
   border: none;
   display: block;
 }
@@ -1231,7 +1242,18 @@ p:last-child { margin-bottom: 0; }
     gap: 2rem;
   }
 
-  .map-embed { height: 280px; }
+  .location-map,
+  .map-embed,
+  .map-container {
+    min-height: 380px;
+  }
+
+  .map-embed { height: 380px; }
+  .map-embed iframe,
+  .map-container iframe {
+    height: 380px;
+    min-height: 380px;
+  }
 
   /* Footer */
   .site-footer__grid {
