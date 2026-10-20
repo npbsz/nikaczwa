@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" role="img" aria-label="Nika Autoserwis logo">
+  <defs>
+    <style>
+      .logo-text-main { font-family: 'Arial Black', 'Impact', sans-serif; font-weight: 900; }
+      .logo-text-sub  { font-family: 'Arial', 'Helvetica', sans-serif; font-weight: 600; letter-spacing: 3px; }
+    </style>
+  </defs>
+
+  <!-- ══════════════ WRENCH ICON (left) ══════════════ -->
+  <!-- Wrench body -->
+  <g transform="translate(10, 10)">
+    <!-- Gear-like circle background -->
+    <circle cx="30" cy="30" r="30" fill="#1197DE" opacity="0.12"/>
+
+    <!-- Stylised wrench path in #1197DE -->
+    <!-- Handle -->
+    <rect x="27" y="28" width="9" height="24" rx="4.5" fill="#1197DE" transform="rotate(-38 31.5 40)"/>
+    <!-- Head ring top -->
+    <circle cx="23" cy="18" r="11" fill="none" stroke="#1197DE" stroke-width="5.5"/>
+    <!-- Head gap (cutout) -->
+    <rect x="14" y="12" width="6" height="12" rx="1" fill="white"/>
+    <!-- Red accent bolt hole -->
+    <circle cx="23" cy="18" r="4" fill="#E30001"/>
+    <!-- Small spanner jaw notch -->
+    <polygon points="14,10 20,10 14,16" fill="#1197DE"/>
+  </g>
+
+  <!-- ══════════════ RED ACCENT LINE ══════════════ -->
+  <rect x="72" y="16" width="4" height="48" rx="2" fill="#E30001"/>
+
+  <!-- ══════════════ TEXT BLOCK (right of line) ══════════════ -->
+  <!-- NIKA -->
+  <text x="84" y="52" class="logo-text-main" font-size="42" fill="#015FB4" dominant-baseline="auto">NIKA</text>
+  <!-- AUTOSERWIS -->
+  <text x="85" y="67" class="logo-text-sub" font-size="11.5" fill="#1197DE" dominant-baseline="auto">AUTOSERWIS</text>
+
+  <!-- Thin decorative underline beneath NIKA -->
+  <rect x="84" y="56" width="168" height="2.5" rx="1.25" fill="#1197DE" opacity="0.25"/>
+</svg>

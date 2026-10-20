@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nika Autoserwis favicon">
+  <!-- Dark blue circular background -->
+  <circle cx="32" cy="32" r="32" fill="#015FB4"/>
+
+  <!-- Bold white letter N -->
+  <text
+    x="32"
+    y="46"
+    text-anchor="middle"
+    font-family="'Arial Black', Impact, sans-serif"
+    font-weight="900"
+    font-size="38"
+    fill="#FFFFFF"
+    dominant-baseline="auto"
+    letter-spacing="-1"
+  >N</text>
+
+  <!-- Red accent dot – bottom-right corner -->
+  <circle cx="54" cy="54" r="7" fill="#E30001"/>
+  <!-- Tiny white highlight inside red dot -->
+  <circle cx="52" cy="52" r="2" fill="rgba(255,255,255,0.45)"/>
+</svg>
