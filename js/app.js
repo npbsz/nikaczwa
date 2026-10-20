@@ -438,36 +438,108 @@
   }
 
   // ============================================================
-  //  SECTION 9 – MICROSOFT BOOKINGS IFRAME LOADING STATE
+  //  SECTION 9 – MICROSOFT BOOKINGS IFRAME LOADING STATE & UNRESPONSIVE NOTICE
   // ============================================================
 
   function initBookingsIframe() {
     const iframe = document.getElementById('bookings-iframe');
     const overlay = document.getElementById('bookings-loading');
+    const errorNotice = document.getElementById('bookings-error-notice');
+    const fallbackContainer = document.querySelector('.booking-fallback');
+    const fallbackBtn = document.getElementById('booking-fallback-btn');
+    const retryBtn = document.getElementById('booking-retry-btn');
+    const externalBtn = document.getElementById('booking-error-external-btn');
+    const phoneLink = document.getElementById('booking-error-phone-link');
+    const phoneDisplay = document.getElementById('booking-error-phone-display');
+
     if (!iframe) return;
 
-    // Set the src from config (avoids hard-coding in HTML)
-    const bookingsUrl = window.NIKA_CONFIG && window.NIKA_CONFIG.integrations.microsoftBookingsUrl;
-    if (bookingsUrl) {
-      iframe.src = bookingsUrl;
-      // Also wire up the fallback "open in new window" link
-      var fallbackBtn = document.getElementById('booking-fallback-btn');
-      if (fallbackBtn) fallbackBtn.href = bookingsUrl;
+    const config = window.NIKA_CONFIG || {};
+    const bookingsUrl = config.integrations && config.integrations.microsoftBookingsUrl;
+    const phone = (config.business && config.business.phone) || '+48606791204';
+    const phoneDisp = (config.business && config.business.phoneDisplay) || '+48 606 791 204';
+
+    if (phoneLink) phoneLink.href = 'tel:' + phone;
+    if (phoneDisplay) phoneDisplay.textContent = phoneDisp;
+
+    let loadTimeout = null;
+    let isConnected = false;
+
+    function showBookingError() {
+      if (loadTimeout) clearTimeout(loadTimeout);
+      if (overlay) overlay.style.display = 'none';
+      iframe.style.display = 'none';
+      if (errorNotice) errorNotice.style.display = 'flex';
+      if (fallbackContainer) fallbackContainer.style.display = 'none';
     }
 
-    // Show overlay until iframe content loads
-    if (overlay) overlay.style.display = 'flex';
-
-    iframe.addEventListener('load', function () {
+    function showBookingSuccess() {
+      if (loadTimeout) clearTimeout(loadTimeout);
+      isConnected = true;
       if (overlay) {
         overlay.style.opacity = '0';
-        // Remove from layout after fade (if CSS transition defined)
         setTimeout(function () {
           overlay.style.display = 'none';
         }, 300);
       }
+      iframe.style.display = 'block';
       iframe.style.opacity = '1';
+      if (errorNotice) errorNotice.style.display = 'none';
+      if (fallbackContainer) fallbackContainer.style.display = 'flex';
+    }
+
+    function attemptLoad() {
+      // Check if URL is placeholder / missing / template domain
+      const isUnconfigured = !bookingsUrl ||
+        bookingsUrl.includes('example.com') ||
+        bookingsUrl.includes('your-bookings-page');
+
+      if (isUnconfigured) {
+        showBookingError();
+        return;
+      }
+
+      // Valid URL configured: setup links
+      if (fallbackBtn) fallbackBtn.href = bookingsUrl;
+      if (externalBtn) externalBtn.href = bookingsUrl;
+
+      if (errorNotice) errorNotice.style.display = 'none';
+      if (overlay) {
+        overlay.style.display = 'flex';
+        overlay.style.opacity = '1';
+      }
+      iframe.style.display = 'block';
+      iframe.style.opacity = '0';
+
+      // Watchdog: If Microsoft takes more than 7 seconds to respond, show notice
+      if (loadTimeout) clearTimeout(loadTimeout);
+      loadTimeout = setTimeout(function () {
+        if (!isConnected) {
+          showBookingError();
+        }
+      }, 7000);
+
+      // Trigger load
+      iframe.src = bookingsUrl;
+    }
+
+    iframe.addEventListener('load', function () {
+      showBookingSuccess();
     });
+
+    iframe.addEventListener('error', function () {
+      showBookingError();
+    });
+
+    if (retryBtn) {
+      retryBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        isConnected = false;
+        attemptLoad();
+      });
+    }
+
+    attemptLoad();
   }
 
   // ============================================================

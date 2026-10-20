@@ -64,6 +64,12 @@ window.NIKA_I18N = {
     booking_subtitle: "Wybierz wygodny termin przez nasz system rezerwacji online.",
     booking_open_new: "Otwórz stronę rezerwacji w nowym oknie",
     booking_loading: "Ładowanie formularza rezerwacji...",
+    booking_error_badge: "Brak połączenia",
+    booking_error_title: "System rezerwacji online jest chwilowo niedostępny",
+    booking_error_desc: "Kalendarz Microsoft 365 w tym momencie nie odpowiada lub usługa rezerwacji nie jest połączona. Skontaktuj się z nami telefonicznie – chętnie umówimy dogodny termin wizyty.",
+    booking_error_call_btn: "Zadzwoń i umów wizytę",
+    booking_error_retry_btn: "Spróbuj ponownie",
+    booking_error_external_btn: "Otwórz w nowej karcie",
 
     // --- Location section ---
     location_title: "Jak Dojechać",
@@ -145,6 +151,12 @@ window.NIKA_I18N = {
     booking_subtitle: "Choose a convenient time through our online booking system.",
     booking_open_new: "Open booking page in a new window",
     booking_loading: "Loading booking form...",
+    booking_error_badge: "Not Connected",
+    booking_error_title: "Online booking system is currently unavailable",
+    booking_error_desc: "The Microsoft 365 calendar is currently not responding or the booking service is not connected. Please contact us by phone – we will gladly schedule your appointment directly.",
+    booking_error_call_btn: "Call to book an appointment",
+    booking_error_retry_btn: "Try again",
+    booking_error_external_btn: "Open in a new tab",
 
     // --- Location section ---
     location_title: "Get Directions",
@@ -226,6 +238,12 @@ window.NIKA_I18N = {
     booking_subtitle: "Оберіть зручний час через нашу онлайн-систему запису.",
     booking_open_new: "Відкрити сторінку запису в новому вікні",
     booking_loading: "Завантаження форми запису...",
+    booking_error_badge: "Немає з'єднання",
+    booking_error_title: "Система онлайн-запису наразі недоступна",
+    booking_error_desc: "Календар Microsoft 365 наразі не відповідає або послуга запису не підключена. Будь ласка, зв'яжіться з нами телефоном – ми з радістю призначимо зручний час візиту.",
+    booking_error_call_btn: "Зателефонувати для запису",
+    booking_error_retry_btn: "Спробувати знову",
+    booking_error_external_btn: "Відкрити в новій вкладці",
 
     // --- Location section ---
     location_title: "Як дістатися",
