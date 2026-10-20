@@ -49,7 +49,7 @@ window.NIKA_I18N = {
     service_diag_title: "Diagnostyka Komputerowa",
     service_diag_desc: "Zaawansowany sprzęt diagnostyczny do szybkiego i precyzyjnego wykrycia usterek.",
     service_brakes_title: "Układ Hamulcowy",
-    service_brakes_desc: "Wymiana klocków, tarcz, sprawdzanie cylinderków – Twoje bezpieczeństwo na drodze.",
+    service_brakes_desc: "Wymiana klocków, tarcz, sprawdzanie cylinderków - Twoje bezpieczeństwo na drodze.",
     service_oil_title: "Wymiana Oleju i Filtrów",
     service_oil_desc: "Kompleksowa wymiana oleju silnikowego i wszystkich filtrów zgodnie z normami producenta.",
     service_suspension_title: "Zawieszenie i Układ Kierowniczy",
@@ -57,7 +57,7 @@ window.NIKA_I18N = {
     service_ac_title: "Serwis Klimatyzacji",
     service_ac_desc: "Uzupełnianie czynnika, dezynfekcja i pełny przegląd układu klimatyzacji.",
     service_tires_title: "Wulkanizacja i Opony",
-    service_tires_desc: "Wymiana, wyważanie, naprawy opon – sezonowe i całoroczne.",
+    service_tires_desc: "Wymiana, wyważanie, naprawy opon - sezonowe i całoroczne.",
 
     // --- Booking section ---
     booking_title: "Zarezerwuj Wizytę",
@@ -66,14 +66,14 @@ window.NIKA_I18N = {
     booking_loading: "Ładowanie formularza rezerwacji...",
     booking_error_badge: "Brak połączenia",
     booking_error_title: "System rezerwacji online jest chwilowo niedostępny",
-    booking_error_desc: "Kalendarz Microsoft 365 w tym momencie nie odpowiada lub usługa rezerwacji nie jest połączona. Skontaktuj się z nami telefonicznie – chętnie umówimy dogodny termin wizyty.",
+    booking_error_desc: "Kalendarz Microsoft 365 w tym momencie nie odpowiada lub usługa rezerwacji nie jest połączona. Skontaktuj się z nami telefonicznie - chętnie umówimy dogodny termin wizyty.",
     booking_error_call_btn: "Zadzwoń i umów wizytę",
     booking_error_retry_btn: "Spróbuj ponownie",
     booking_error_external_btn: "Otwórz w nowej karcie",
 
     // --- Location section ---
     location_title: "Jak Dojechać",
-    location_subtitle: "Znajdziesz nas w Częstochowie – łatwy dojazd i parking",
+    location_subtitle: "Znajdziesz nas w Częstochowie - łatwy dojazd i parking",
     location_hours_title: "Godziny Otwarcia",
     location_navigate_btn: "Nawiguj do warsztatu",
     location_today: "Dziś",
@@ -136,7 +136,7 @@ window.NIKA_I18N = {
     service_diag_title: "Computer Diagnostics",
     service_diag_desc: "Advanced diagnostic equipment for fast and accurate fault detection.",
     service_brakes_title: "Braking System",
-    service_brakes_desc: "Pad and disc replacement, caliper checks – your safety on the road.",
+    service_brakes_desc: "Pad and disc replacement, caliper checks - your safety on the road.",
     service_oil_title: "Oil & Filter Service",
     service_oil_desc: "Full engine oil and filter replacement to manufacturer specifications.",
     service_suspension_title: "Suspension & Steering",
@@ -144,7 +144,7 @@ window.NIKA_I18N = {
     service_ac_title: "AC Service",
     service_ac_desc: "Refrigerant refill, disinfection, and full air conditioning system inspection.",
     service_tires_title: "Tyre Fitting & Balancing",
-    service_tires_desc: "Tyre changes, balancing, repairs – seasonal and all-year round.",
+    service_tires_desc: "Tyre changes, balancing, repairs - seasonal and all-year round.",
 
     // --- Booking section ---
     booking_title: "Book an Appointment",
@@ -153,14 +153,14 @@ window.NIKA_I18N = {
     booking_loading: "Loading booking form...",
     booking_error_badge: "Not Connected",
     booking_error_title: "Online booking system is currently unavailable",
-    booking_error_desc: "The Microsoft 365 calendar is currently not responding or the booking service is not connected. Please contact us by phone – we will gladly schedule your appointment directly.",
+    booking_error_desc: "The Microsoft 365 calendar is currently not responding or the booking service is not connected. Please contact us by phone - we will gladly schedule your appointment directly.",
     booking_error_call_btn: "Call to book an appointment",
     booking_error_retry_btn: "Try again",
     booking_error_external_btn: "Open in a new tab",
 
     // --- Location section ---
     location_title: "Get Directions",
-    location_subtitle: "Find us in Częstochowa – easy access, ample parking",
+    location_subtitle: "Find us in Częstochowa - easy access, ample parking",
     location_hours_title: "Opening Hours",
     location_navigate_btn: "Navigate to Workshop",
     location_today: "Today",
@@ -223,7 +223,7 @@ window.NIKA_I18N = {
     service_diag_title: "Комп'ютерна Діагностика",
     service_diag_desc: "Сучасне обладнання для швидкого та точного виявлення несправностей.",
     service_brakes_title: "Гальмівна система",
-    service_brakes_desc: "Заміна колодок, дисків, перевірка циліндрів – ваша безпека на дорозі.",
+    service_brakes_desc: "Заміна колодок, дисків, перевірка циліндрів - ваша безпека на дорозі.",
     service_oil_title: "Заміна мастила та фільтрів",
     service_oil_desc: "Комплексна заміна моторного масла та всіх фільтрів згідно з нормами виробника.",
     service_suspension_title: "Підвіска та рульове керування",
@@ -231,7 +231,7 @@ window.NIKA_I18N = {
     service_ac_title: "Сервіс кондиціонера",
     service_ac_desc: "Заправка фреону, дезінфекція та повна перевірка системи кондиціювання.",
     service_tires_title: "Шиномонтаж та колеса",
-    service_tires_desc: "Заміна, балансування, ремонт шин – сезонні та цілорічні послуги.",
+    service_tires_desc: "Заміна, балансування, ремонт шин - сезонні та цілорічні послуги.",
 
     // --- Booking section ---
     booking_title: "Записатися на прийом",
@@ -240,14 +240,14 @@ window.NIKA_I18N = {
     booking_loading: "Завантаження форми запису...",
     booking_error_badge: "Немає з'єднання",
     booking_error_title: "Система онлайн-запису наразі недоступна",
-    booking_error_desc: "Календар Microsoft 365 наразі не відповідає або послуга запису не підключена. Будь ласка, зв'яжіться з нами телефоном – ми з радістю призначимо зручний час візиту.",
+    booking_error_desc: "Календар Microsoft 365 наразі не відповідає або послуга запису не підключена. Будь ласка, зв'яжіться з нами телефоном - ми з радістю призначимо зручний час візиту.",
     booking_error_call_btn: "Зателефонувати для запису",
     booking_error_retry_btn: "Спробувати знову",
     booking_error_external_btn: "Відкрити в новій вкладці",
 
     // --- Location section ---
     location_title: "Як дістатися",
-    location_subtitle: "Знайдіть нас у Ченстохові – зручний під'їзд, велике паркування",
+    location_subtitle: "Знайдіть нас у Ченстохові - зручний під'їзд, велике паркування",
     location_hours_title: "Години роботи",
     location_navigate_btn: "Прокласти маршрут до сервісу",
     location_today: "Сьогодні",
