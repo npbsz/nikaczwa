@@ -1,0 +1,28 @@
+/* ============================================================
+   NIKA AUTOSERWIS – Utilities & Accessibility (css/base/utilities.css)
+   ============================================================ */
+
+/* ── SVG Icon Base ────────────────────────────────────────── */
+.svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ── Focus & Accessibility ───────────────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
