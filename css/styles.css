@@ -582,7 +582,7 @@ p:last-child { margin-bottom: 0; }
   font-weight: 600;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  color: var(--color-white);
+  color: var(--color-black);
   letter-spacing: 0.03em;
 }
 
