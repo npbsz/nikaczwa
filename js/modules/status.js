@@ -18,7 +18,7 @@ let activeConfig = null;
  * @returns {{ open: boolean, text: string }}
  */
 export function getGarageStatus(cfg) {
-  const config = cfg || activeConfig || window.NIKA_CONFIG || {};
+  const config = cfg || activeConfig || (typeof window !== 'undefined' ? window.NIKA_CONFIG : {}) || {};
   const lang = getCurrentLang();
   const t = getTranslations(lang);
 
@@ -55,9 +55,19 @@ export function getGarageStatus(cfg) {
 export function updateGarageStatus() {
   const status = getGarageStatus();
   document.querySelectorAll('.status-badge').forEach(function (badge) {
-    badge.textContent = status.text;
+    const textEl = badge.querySelector('.status-badge__text');
+    if (textEl) {
+      textEl.textContent = status.text;
+    } else {
+      badge.innerHTML = `
+        <span class="status-badge__dot" aria-hidden="true"></span>
+        <span class="status-badge__text">${status.text}</span>
+      `;
+    }
     badge.classList.toggle('status-open', status.open);
     badge.classList.toggle('status-closed', !status.open);
+    badge.classList.toggle('status-badge--open', status.open);
+    badge.classList.toggle('status-badge--closed', !status.open);
   });
 }
 

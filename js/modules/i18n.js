@@ -16,7 +16,7 @@ const STORAGE_KEY = 'nika_lang';
  * @returns {string} 'pl' | 'en' | 'uk'
  */
 export function getCurrentLang() {
-  const stored = localStorage.getItem(STORAGE_KEY);
+  const stored = typeof localStorage !== 'undefined' ? localStorage.getItem(STORAGE_KEY) : null;
   return (stored && SUPPORTED_LANGS.includes(stored)) ? stored : 'pl';
 }
 
@@ -75,7 +75,9 @@ export function setLanguage(lang) {
   if (!SUPPORTED_LANGS.includes(lang)) lang = 'pl';
 
   // Persist choice
-  localStorage.setItem(STORAGE_KEY, lang);
+  if (typeof localStorage !== 'undefined') {
+    localStorage.setItem(STORAGE_KEY, lang);
+  }
 
   // Update <html lang>
   document.documentElement.lang = lang;
