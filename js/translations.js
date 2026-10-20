@@ -12,9 +12,8 @@ export const translations = {
   pl: {
     // --- Navigation ---
     nav_services: "Usługi",
-    nav_hours: "Godziny",
     nav_booking: "Rezerwacja",
-    nav_location: "Dojazd",
+    nav_location: "Godziny i dojazd",
     nav_call: "Zadzwoń",
 
     // --- Language names (for dropdown) ---
@@ -99,9 +98,8 @@ export const translations = {
   en: {
     // --- Navigation ---
     nav_services: "Services",
-    nav_hours: "Hours",
     nav_booking: "Booking",
-    nav_location: "Location",
+    nav_location: "Hours & Location",
     nav_call: "Call Us",
 
     // --- Language names ---
@@ -166,7 +164,7 @@ export const translations = {
     location_closed_text: "Closed",
 
     // --- Footer ---
-    footer_tagline: "Professional auto service in Warsaw",
+    footer_tagline: "Professional auto service in Częstochowa",
     footer_links_title: "Quick Links",
     footer_contact_title: "Contact",
     footer_copyright: "© 2026 Nika Autoserwis. All rights reserved.",
@@ -186,9 +184,8 @@ export const translations = {
   uk: {
     // --- Navigation ---
     nav_services: "Послуги",
-    nav_hours: "Години",
     nav_booking: "Запис",
-    nav_location: "Маршрут",
+    nav_location: "Години та маршрут",
     nav_call: "Зателефонувати",
 
     // --- Language names ---

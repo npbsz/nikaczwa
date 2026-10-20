@@ -1,0 +1,282 @@
+/* ============================================================
+   NIKA AUTOSERWIS – Components (css/components.css)
+   Buttons, Cards, Badges, Status, Notice & Dropdown (< 300 lines)
+   ============================================================ */
+
+/* ── 1. Buttons ──────────────────────────────────────────── */
+.btn, .btn-primary, .btn-secondary, .btn-navigate,
+.booking-error-call, .btn-booking-retry, .btn-booking-external, .booking-fallback-btn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition-base), border-color var(--transition-base),
+              color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-fast);
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.btn:active, .btn-primary:active, .btn-secondary:active, .btn-navigate:active,
+.booking-error-call:active, .btn-booking-retry:active, .btn-booking-external:active {
+  transform: translateY(0);
+}
+
+.btn-primary, .booking-error-call, .btn-secondary, .btn-navigate {
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+}
+
+.btn-primary, .booking-error-call {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+.btn-primary:hover, .booking-error-call:hover,
+.btn-primary:focus-visible, .booking-error-call:focus-visible {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-secondary, .btn-navigate {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-secondary:hover, .btn-navigate:hover,
+.btn-secondary:focus-visible, .btn-navigate:focus-visible {
+  background: var(--color-surface-2);
+  border-color: var(--color-secondary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.btn-booking-retry, .btn-booking-external, .booking-fallback-btn a {
+  background: var(--color-surface-1);
+  color: var(--color-text);
+  border-color: var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 10px 18px;
+  font-size: var(--text-sm);
+}
+.btn-booking-retry:hover, .btn-booking-external:hover, .booking-fallback-btn a:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-white);
+  transform: translateY(-1px);
+}
+
+.btn-navigate__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ── 2. Cards & Containers ───────────────────────────────── */
+.card, .hero-card, .service-card, .booking-error-notice {
+  background: var(--color-white); border-radius: var(--radius-md); border: 1.5px solid var(--color-border);
+  box-shadow: none; padding: 32px 28px; display: flex; flex-direction: column; gap: 1.25rem;
+}
+
+.booking-iframe-container, .map-embed {
+  background: var(--color-white); border-radius: var(--radius-lg); border: 1.5px solid var(--color-border);
+  box-shadow: none; overflow: hidden; position: relative;
+}
+
+.card-divider, .hero-card__divider {
+  height: 1px;
+  background: var(--color-border);
+  width: 100%;
+}
+
+.card-icon-circle, .hero-card__icon, .service-card__icon, .service-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── 3. Badges, Pills & Live Status ──────────────────────── */
+.badge, .pill, .status-badge, .today-badge, .copy-address, .booking-error-notice__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+.status-badge {
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 8px 20px;
+  color: #ffffff !important;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+.status-badge--open, .status-badge.status-open {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.status-badge--closed, .status-badge.status-closed {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  flex-shrink: 0;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.status-badge--open .status-badge__dot, .status-badge.status-open .status-badge__dot {
+  animation: status-pulse-open 1.8s ease infinite;
+}
+.status-badge--closed .status-badge__dot, .status-badge.status-closed .status-badge__dot {
+  animation: status-pulse-closed 2.5s ease infinite;
+}
+@keyframes status-pulse-open {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.85); }
+  60%      { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+}
+@keyframes status-pulse-closed {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.65); }
+  60%      { box-shadow: 0 0 0 6px rgba(255, 255, 255, 0); }
+}
+
+.today-badge {
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  margin-right: 6px;
+  text-transform: uppercase;
+}
+
+.copy-address {
+  font-size: var(--text-xs);
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+.copy-address:hover { background: rgba(255, 255, 255, 0.32); }
+
+.booking-error-notice__badge {
+  font-size: var(--text-xs);
+  padding: 6px 16px;
+  background: #FEE2E2;
+  color: var(--color-danger);
+  border: 1px solid rgba(227, 0, 1, 0.2);
+}
+
+/* ── 4. Notice Banner ────────────────────────────────────── */
+.notice-banner {
+  display: none;
+  width: 100%;
+  background: var(--color-danger);
+  color: var(--color-white);
+  padding: 12px 24px;
+  position: relative;
+  z-index: 1100;
+  overflow: hidden;
+}
+.notice-banner.active { display: flex; align-items: center; gap: 12px; animation: slideDown 0.35s ease forwards; }
+.notice-banner.hiding { display: flex; animation: slideUp 0.35s ease forwards; }
+.notice-banner__icon { font-size: 1.25rem; flex-shrink: 0; line-height: 1; }
+.notice-banner__text { flex: 1; font-size: var(--text-sm); font-weight: 500; line-height: 1.45; }
+.notice-banner__dismiss {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.25);
+  color: var(--color-white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+.notice-banner__dismiss:hover { background: rgba(255, 255, 255, 0.40); }
+
+@keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-100%); opacity: 0; } }
+
+@media (max-width: 767px) {
+  .notice-banner.active { flex-wrap: wrap; }
+  .notice-banner__text { flex: 1 1 100%; order: 2; }
+  .notice-banner__icon { order: 1; }
+  .notice-banner__dismiss { order: 3; }
+}
+
+/* ── 5. Language Dropdown ────────────────────────────────── */
+.lang-selector, .lang-dropdown { position: relative; display: inline-block; flex-shrink: 0; }
+.lang-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  width: 104px; max-width: 104px; flex-shrink: 0; background: transparent;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-pill);
+  padding: 6px 8px; font-size: var(--text-sm); font-weight: 500; color: var(--color-text);
+  cursor: pointer; transition: border-color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+.lang-btn:hover { border-color: var(--color-secondary); background: var(--color-surface-1); }
+
+.lang-btn__code, [data-lang-label] {
+  display: inline-block; max-width: 48px; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; vertical-align: middle; text-align: left;
+}
+.lang-btn .chevron, .lang-btn__chevron {
+  font-size: 0.65rem; transition: transform var(--transition-fast); margin-left: 2px;
+  display: inline-flex; align-items: center; line-height: 1; flex-shrink: 0;
+}
+.lang-btn__flag, .lang-option__flag { display: inline-flex; align-items: center; line-height: 1; flex-shrink: 0; }
+.lang-flag { border-radius: 2px; box-shadow: 0 0 1px rgba(0, 0, 0, 0.4); vertical-align: middle; }
+.lang-selector.open .lang-btn__chevron, .lang-dropdown.open .lang-btn__chevron,
+.lang-selector.open .chevron, .lang-dropdown.open .chevron { transform: rotate(180deg); }
+
+.lang-menu {
+  display: none; position: absolute; top: calc(100% + 8px); right: 0; min-width: 160px;
+  background: var(--color-white); border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border); overflow: hidden; z-index: 200; animation: fadeInDown 0.2s ease;
+}
+.lang-selector.open .lang-menu, .lang-dropdown.open .lang-menu { display: block; }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  white-space: nowrap;
+}
+.lang-option:hover { background: var(--color-surface-2); }
+.lang-option.active { background: var(--color-surface-1); font-weight: 600; }

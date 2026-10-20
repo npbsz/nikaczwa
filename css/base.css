@@ -1,0 +1,210 @@
+/* ============================================================
+   NIKA AUTOSERWIS – Base Styles (css/base.css)
+   Tokens, Reset, Typography, Layout & Utilities (< 300 lines)
+   ============================================================ */
+
+/* ── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;700&display=swap');
+
+/* ── Design Tokens & CSS Custom Properties ───────────────── */
+:root {
+  /* Brand colours */
+  --color-primary:      #015FB4;
+  --color-secondary:    #1197DE;
+  --color-accent:       #81D4F7;
+  --color-danger:       #E30001;
+  --color-white:        #FFFFFF;
+
+  /* Surface & neutral colours */
+  --color-surface-1:    #F0F7FF;
+  --color-surface-2:    #EBF5FF;
+  --color-surface-dark: #0a1628;
+  --color-text:         #1a1a2e;
+  --color-text-muted:   #6b7280;
+  --color-border:       #dde9f5;
+
+  /* Status */
+  --color-open:         #22c55e;
+  --color-closed:       #E30001;
+
+  /* Typography */
+  --font-body:          'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading:       'Oswald', 'Arial Narrow', sans-serif;
+
+  /* Font sizes */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.5rem;
+  --text-5xl:  3.5rem;
+
+  /* Spacing & Radii */
+  --section-py:    80px;
+  --container-px:  24px;
+  --radius-sm:     6px;
+  --radius-md:     12px;
+  --radius-lg:     20px;
+  --radius-pill:   9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(1, 95, 180, 0.10);
+  --shadow-md: 0 4px 16px rgba(1, 95, 180, 0.14);
+  --shadow-lg: 0 8px 32px rgba(1, 95, 180, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.3s ease;
+}
+
+/* ── Base Reset ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ── Typography Scale ────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--text-5xl); font-weight: 700; }
+h2 { font-size: var(--text-4xl); font-weight: 700; }
+h3 { font-size: var(--text-2xl); font-weight: 500; }
+h4 { font-size: var(--text-xl);  font-weight: 500; }
+h5 { font-size: var(--text-lg);  font-weight: 500; }
+h6 { font-size: var(--text-base); font-weight: 500; }
+
+p { margin-bottom: 1rem; }
+p:last-child { margin-bottom: 0; }
+
+/* ── Layout Primitives ───────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--container-px);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: var(--radius-pill);
+  margin: 12px auto 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  margin-top: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── Accessibility & Utilities ───────────────────────────── */
+.svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Responsive Base Overrides ───────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --section-py: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: 48px;
+    --container-px: 16px;
+  }
+
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-2xl); }
+  .section-title { font-size: var(--text-3xl); }
+}

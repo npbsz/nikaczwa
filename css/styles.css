@@ -1,26 +1,20 @@
 /* ============================================================
    NIKA AUTOSERWIS – Master Stylesheet Manifest (css/styles.css)
-   Imports all base styles and components in cascade order.
+   Consolidated 4-tier modular architecture (< 300 lines per file)
    ============================================================ */
 
-/* 1. Base Layer */
-@import url('./base/variables.css');
-@import url('./base/reset.css');
-@import url('./base/typography.css');
-@import url('./base/layout.css');
-@import url('./base/buttons.css');
-@import url('./base/utilities.css');
+/* 1. Base Layer & Primitives (Variables, Reset, Typography, Layout, Utilities) */
+@import url('./base.css');
 
-/* 2. Global UI Components */
-@import url('./components/notice.css');
-@import url('./components/header.css');
-@import url('./components/language.css');
-@import url('./components/mobile-bar.css');
-@import url('./components/footer.css');
+/* 2. UI Components (Buttons, Cards, Badges, Status, Dropdowns, Notice) */
+@import url('./components.css');
 
-/* 3. Section Content Components */
-@import url('./components/hero.css');
-@import url('./components/quick-info.css');
-@import url('./components/services.css');
-@import url('./components/booking.css');
-@import url('./components/location.css');
+/* 3. Global Navigation & Chrome (Header, Nav Menu, Mobile Bar, Footer) */
+@import url('./navigation.css');
+
+/* 4. Page Content Sections (Hero, Services, Booking, Location & Maps) */
+@import url('./sections.css');
+
+/* 4. Page Content Sections (Hero, Services, Booking, Location & Maps) */
+@import url('./sections.css');
+

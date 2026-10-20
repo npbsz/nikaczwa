@@ -49,7 +49,11 @@ function _updateLangDropdown(lang, t) {
       uk: '<svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#ffd700" d="M0 240h640v240H0z"/><path fill="#0057b7" d="M0 0h640v240H0z"/></g></svg>'
     };
     if (flagSpan && flags[lang]) flagSpan.innerHTML = flags[lang];
-    if (labelSpan) labelSpan.textContent = t['lang_' + lang] || lang.toUpperCase();
+    if (labelSpan) {
+      const text = t['lang_' + lang] || lang.toUpperCase();
+      labelSpan.textContent = text;
+      labelSpan.title = text;
+    }
   }
 
   // Mark the active option
