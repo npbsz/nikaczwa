@@ -34,18 +34,18 @@ window.NIKA_CONFIG = {
       uk: "Nika Автосервіс"
     },
     tagline: {
-      pl: "Profesjonalny serwis samochodowy w Warszawie",
-      en: "Professional Auto Service in Warsaw",
-      uk: "Професійне автотехобслуговування у Варшаві"
+      pl: "Profesjonalny serwis samochodowy w Częstochowie",
+      en: "Professional Auto Service in Częstochowa",
+      uk: "Професійне автотехобслуговування у Ченстохові"
     },
-    phone: "+48500123456",
-    phoneDisplay: "+48 500 123 456",
+    phone: "+48606791204",
+    phoneDisplay: "+48 606 791 204",
     email: "kontakt@nika-autoserwis.pl",
     address: {
-      street: "ul. Przykładowa 42",
-      postalCode: "02-123",
-      city: "Warszawa",
-      full: "ul. Przykładowa 42, 02-123 Warszawa"
+      street: "ul. Kiedrzyńska 14",
+      postalCode: "42-202",
+      city: "Częstochowa",
+      full: "ul. Kiedrzyńska 14, 42-202 Częstochowa"
     },
     nip: "1234567890",
 
@@ -57,24 +57,17 @@ window.NIKA_CONFIG = {
     hours: [
       {
         days: { pl: "Poniedziałek – Piątek", en: "Monday – Friday", uk: "Понеділок – П'ятниця" },
-        time: "08:00 – 18:00",
+        time: "08:00 – 17:00",
         openHour: 8,
-        closeHour: 18,
+        closeHour: 17,
         daysOfWeek: [1, 2, 3, 4, 5]
       },
       {
-        days: { pl: "Sobota", en: "Saturday", uk: "Субота" },
-        time: "09:00 – 14:00",
-        openHour: 9,
-        closeHour: 14,
-        daysOfWeek: [6]
-      },
-      {
-        days: { pl: "Niedziela", en: "Sunday", uk: "Неділя" },
+        days: { pl: "Sobota – Niedziela", en: "Saturday – Sunday", uk: "Субота – Неділя" },
         time: { pl: "Zamknięte", en: "Closed", uk: "Зачинено" },
         openHour: null,
         closeHour: null,
-        daysOfWeek: [0]
+        daysOfWeek: [6,0]
       }
     ]
   },
@@ -87,7 +80,7 @@ window.NIKA_CONFIG = {
     microsoftBookingsUrl: "https://outlook.office365.com/owa/calendar/NikaAutoserwis@example.com/bookings/",
 
     // Google Maps - replace coordinates or query with your actual address
-    mapsDestinationQuery: "ul.+Przyk%C5%82adowa+42,+02-123+Warszawa,+Polska",
-    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.3543850255!2d20.92111263595245!3d52.23306532087532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarsaw!5e0!3m2!1spl!2spl!4v1700000000000!5m2!1spl!2spl"
+    mapsDestinationQuery: "50.81929495977339, 19.128152891899784",
+    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.6363495964406!2d19.125681776883184!3d50.81937596073161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5afb1b83635%3A0x84c0d093dc95d3c5!2sNIKA%20wymiana%20oleju%2C%20mechanika!5e0!3m2!1sde!2sde!4v1792503973581!5m2!1sde!2sde"
   }
 };

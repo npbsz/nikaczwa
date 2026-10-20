@@ -1265,6 +1265,81 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ============================================================
+   SVG ICON UTILITIES & HERO TAGS
+   ============================================================ */
+.svg-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-white);
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.hero-tag__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-secondary);
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.lang-btn__flag,
+.lang-option__flag {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.lang-flag {
+  border-radius: 2px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.4);
+  vertical-align: middle;
+}
+
+.btn-call-header__icon,
+.mobile-action-btn__icon,
+.btn-navigate__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ============================================================
    FOCUS & ACCESSIBILITY
    ============================================================ */
 :focus-visible {

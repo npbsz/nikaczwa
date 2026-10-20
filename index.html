@@ -33,7 +33,13 @@
   ====================================================== -->
   <div class="notice-banner" id="notice-banner" role="alert" aria-live="polite">
     <div class="notice-banner__inner container">
-      <span class="notice-banner__icon" aria-hidden="true">⚠️</span>
+      <span class="notice-banner__icon" aria-hidden="true">
+        <svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+      </span>
       <span class="notice-banner__text" id="notice-text"></span>
       <button class="notice-banner__dismiss notice-dismiss" id="notice-dismiss" aria-label="Zamknij komunikat" data-i18n-aria="notice_dismiss_aria">
         <span data-i18n="notice_dismiss">×</span>
@@ -72,28 +78,52 @@
       <!-- Right Side: Call Button + Language Selector -->
       <div class="header-actions">
         <a href="tel:+48500123456" class="btn-call-header" id="header-phone-link" aria-label="Zadzwoń do nas">
-          <span class="btn-call-header__icon" aria-hidden="true">📞</span>
+          <span class="btn-call-header__icon" aria-hidden="true">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </span>
           <span data-i18n="nav_call">Zadzwoń</span>
         </a>
 
         <!-- Language Selector -->
         <div class="lang-dropdown lang-selector" id="lang-dropdown">
           <button class="lang-btn" id="lang-btn" data-lang-btn aria-haspopup="listbox" aria-expanded="false" aria-label="Wybierz język">
-            <span class="lang-btn__flag" id="lang-btn-flag" data-lang-flag>🇵🇱</span>
+            <span class="lang-btn__flag" id="lang-btn-flag" data-lang-flag>
+              <svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5" aria-hidden="true">
+                <g fill-rule="evenodd"><path fill="#fff" d="M640 480H0V0h640z"/><path fill="#dc143c" d="M640 480H0V240h640z"/></g>
+              </svg>
+            </span>
             <span class="lang-btn__code" id="lang-btn-code" data-lang-label>PL</span>
-            <span class="lang-btn__chevron" aria-hidden="true">▾</span>
+            <span class="lang-btn__chevron" aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </span>
           </button>
           <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Dostępne języki">
             <li class="lang-option" role="option" data-lang-option="pl" tabindex="0">
-              <span class="lang-option__flag" aria-hidden="true">🇵🇱</span>
+              <span class="lang-option__flag" aria-hidden="true">
+                <svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5">
+                  <g fill-rule="evenodd"><path fill="#fff" d="M640 480H0V0h640z"/><path fill="#dc143c" d="M640 480H0V240h640z"/></g>
+                </svg>
+              </span>
               <span class="lang-option__name" data-i18n="lang_pl">Polski</span>
             </li>
             <li class="lang-option" role="option" data-lang-option="en" tabindex="0">
-              <span class="lang-option__flag" aria-hidden="true">🇬🇧</span>
+              <span class="lang-option__flag" aria-hidden="true">
+                <svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5">
+                  <path fill="#012169" d="M0 0h640v480H0z"/><path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/><path fill="#C8102E" d="m424 288 216 159v33L380 288h44zm-208 0-216 160v32l260-192h-44zM216 192 0 32V0l260 192h-44zm208 0L640 33V0L380 192h44z"/><path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/><path fill="#C8102E" d="M267 0h106v480H267zM0 187h640v106H0z"/>
+                </svg>
+              </span>
               <span class="lang-option__name" data-i18n="lang_en">English</span>
             </li>
             <li class="lang-option" role="option" data-lang-option="uk" tabindex="0">
-              <span class="lang-option__flag" aria-hidden="true">🇺🇦</span>
+              <span class="lang-option__flag" aria-hidden="true">
+                <svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5">
+                  <g fill-rule="evenodd" stroke-width="1pt"><path fill="#ffd700" d="M0 240h640v240H0z"/><path fill="#0057b7" d="M0 0h640v240H0z"/></g>
+                </svg>
+              </span>
               <span class="lang-option__name" data-i18n="lang_uk">Українська</span>
             </li>
           </ul>
@@ -133,15 +163,28 @@
           <!-- Trust Tags -->
           <div class="hero__tags">
             <span class="hero-tag">
-              <span class="hero-tag__icon" aria-hidden="true">✅</span>
+              <span class="hero-tag__icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+              </span>
               <span data-i18n="hero_tag_quality">Gwarancja jakości</span>
             </span>
             <span class="hero-tag">
-              <span class="hero-tag__icon" aria-hidden="true">⚡</span>
+              <span class="hero-tag__icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#1197DE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </span>
               <span data-i18n="hero_tag_fast">Szybka diagnostyka</span>
             </span>
             <span class="hero-tag">
-              <span class="hero-tag__icon" aria-hidden="true">🔧</span>
+              <span class="hero-tag__icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#1197DE" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </span>
               <span data-i18n="hero_tag_expert">Doświadczeni mechanicy</span>
             </span>
           </div>
@@ -151,7 +194,12 @@
         <div class="hero__card hero-card" aria-label="Podstawowe informacje">
           <div class="hero-card__section">
             <div class="hero-card__label">
-              <span aria-hidden="true">📍</span>
+              <span aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </span>
               <span data-i18n="info_address_label">Adres</span>
             </div>
             <div class="hero-card__value" id="hero-address-text">ul. Przykładowa 42, 02-123 Częstochowa</div>
@@ -159,7 +207,12 @@
           <div class="hero-card__divider"></div>
           <div class="hero-card__section">
             <div class="hero-card__label">
-              <span aria-hidden="true">🕐</span>
+              <span aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+              </span>
               <span data-i18n="info_hours_label">Godziny otwarcia</span>
             </div>
             <div class="hero-card__value" id="hero-today-hours">08:00 – 18:00</div>
@@ -167,7 +220,11 @@
           <div class="hero-card__divider"></div>
           <div class="hero-card__section">
             <div class="hero-card__label">
-              <span aria-hidden="true">📞</span>
+              <span aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </span>
               <span data-i18n="info_phone_label">Telefon</span>
             </div>
             <div class="hero-card__value">
@@ -189,7 +246,12 @@
       <div class="container quick-info-bar__inner">
 
         <div class="quick-info-item">
-          <span class="quick-info-item__icon" aria-hidden="true">📍</span>
+          <span class="quick-info-item__icon" aria-hidden="true">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </span>
           <div class="quick-info-item__content">
             <span class="quick-info-item__label" data-i18n="info_address_label">Adres</span>
             <div class="quick-info-item__value-row">
@@ -202,7 +264,12 @@
         </div>
 
         <div class="quick-info-item">
-          <span class="quick-info-item__icon" aria-hidden="true">🕐</span>
+          <span class="quick-info-item__icon" aria-hidden="true">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </span>
           <div class="quick-info-item__content">
             <span class="quick-info-item__label" data-i18n="info_hours_label">Godziny otwarcia</span>
             <span class="quick-info-item__value" id="today-hours-text">08:00 – 18:00</span>
@@ -210,7 +277,11 @@
         </div>
 
         <div class="quick-info-item">
-          <span class="quick-info-item__icon" aria-hidden="true">📞</span>
+          <span class="quick-info-item__icon" aria-hidden="true">
+            <svg class="svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </span>
           <div class="quick-info-item__content">
             <span class="quick-info-item__label" data-i18n="info_phone_label">Telefon</span>
             <a href="tel:+48500123456" id="info-phone-link" class="quick-info-item__phone">+48 500 123 456</a>
@@ -343,7 +414,7 @@
           ></iframe>
         </div>
 
-          <!-- Fallback: open in new tab -->
+        <!-- Fallback: open in new tab -->
         <div class="booking-fallback">
           <a
             href="#"
@@ -378,17 +449,31 @@
 
             <div class="location-address-block">
               <div class="icon-text">
-                <span aria-hidden="true">📍</span>
+                <span aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </span>
                 <address id="location-address-text" class="location-address">
                   ul. Przykładowa 42, 02-123 Częstochowa
                 </address>
               </div>
               <div class="icon-text">
-                <span aria-hidden="true">📞</span>
+                <span aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
                 <a href="tel:+48500123456" id="location-phone-link" class="location-phone">+48 500 123 456</a>
               </div>
               <div class="icon-text">
-                <span aria-hidden="true">✉️</span>
+                <span aria-hidden="true">
+                  <svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </span>
                 <a href="mailto:kontakt@nika-autoserwis.pl" id="location-email-link" class="location-email">kontakt@nika-autoserwis.pl</a>
               </div>
             </div>
@@ -400,7 +485,13 @@
               data-navigate-btn
               aria-label="Otwórz nawigację do warsztatu"
             >
-              <span data-i18n="location_navigate_btn">🧭 Nawiguj do warsztatu</span>
+              <span class="btn-navigate__icon" aria-hidden="true">
+                <svg class="svg-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                </svg>
+              </span>
+              <span data-i18n="location_navigate_btn">Nawiguj do warsztatu</span>
             </a>
           </div>
 
@@ -451,19 +542,40 @@
         <h4 class="footer-col__title" data-i18n="footer_contact_title">Kontakt</h4>
         <ul class="footer-contact-list">
           <li class="icon-text">
-            <span aria-hidden="true">📍</span>
+            <span aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </span>
             <span id="footer-address">ul. Przykładowa 42, 02-123 Częstochowa</span>
           </li>
           <li class="icon-text">
-            <span aria-hidden="true">📞</span>
+            <span aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </span>
             <a href="tel:+48500123456" id="footer-phone" class="footer-contact-link">+48 500 123 456</a>
           </li>
           <li class="icon-text">
-            <span aria-hidden="true">✉️</span>
+            <span aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
             <a href="mailto:kontakt@nika-autoserwis.pl" id="footer-email" class="footer-contact-link">kontakt@nika-autoserwis.pl</a>
           </li>
           <li class="icon-text">
-            <span aria-hidden="true">🏛️</span>
+            <span aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+                <line x1="6" y1="6" x2="6.01" y2="6"/>
+                <line x1="6" y1="18" x2="6.01" y2="18"/>
+              </svg>
+            </span>
             <span>
               <span data-i18n="footer_nip">NIP</span>:
               <span id="footer-nip">1234567890</span>
@@ -486,11 +598,20 @@
   ====================================================== -->
   <div class="mobile-action-bar" aria-label="Szybkie akcje mobilne" role="navigation">
     <a href="tel:+48500123456" class="mobile-action-btn mobile-action-btn--call" id="mobile-call-btn">
-      <span class="mobile-action-btn__icon" aria-hidden="true">📞</span>
+      <span class="mobile-action-btn__icon" aria-hidden="true">
+        <svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </span>
       <span data-i18n="mobile_call">Zadzwoń</span>
     </a>
     <a href="#" class="mobile-action-btn mobile-action-btn--navigate" data-navigate-btn>
-      <span class="mobile-action-btn__icon" aria-hidden="true">🧭</span>
+      <span class="mobile-action-btn__icon" aria-hidden="true">
+        <svg class="svg-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+        </svg>
+      </span>
       <span data-i18n="mobile_navigate">Nawiguj</span>
     </a>
   </div>

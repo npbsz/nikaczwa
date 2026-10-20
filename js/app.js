@@ -110,8 +110,12 @@
     if (btn) {
       const flagSpan = btn.querySelector('[data-lang-flag]');
       const labelSpan = btn.querySelector('[data-lang-label]');
-      const flags = { pl: '🇵🇱', en: '🇬🇧', uk: '🇺🇦' };
-      if (flagSpan) flagSpan.textContent = flags[lang] || '';
+      const flags = {
+        pl: '<svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5" aria-hidden="true"><g fill-rule="evenodd"><path fill="#fff" d="M640 480H0V0h640z"/><path fill="#dc143c" d="M640 480H0V240h640z"/></g></svg>',
+        en: '<svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5" aria-hidden="true"><path fill="#012169" d="M0 0h640v480H0z"/><path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/><path fill="#C8102E" d="m424 288 216 159v33L380 288h44zm-208 0-216 160v32l260-192h-44zM216 192 0 32V0l260 192h-44zm208 0L640 33V0L380 192h44z"/><path fill="#FFF" d="M240 0h160v480H240zM0 160h640v160H0z"/><path fill="#C8102E" d="M267 0h106v480H267zM0 187h640v106H0z"/></svg>',
+        uk: '<svg class="lang-flag" viewBox="0 0 640 480" width="18" height="13.5" aria-hidden="true"><g fill-rule="evenodd" stroke-width="1pt"><path fill="#ffd700" d="M0 240h640v240H0z"/><path fill="#0057b7" d="M0 0h640v240H0z"/></g></svg>'
+      };
+      if (flagSpan && flags[lang]) flagSpan.innerHTML = flags[lang];
       if (labelSpan) labelSpan.textContent = t['lang_' + lang] || lang.toUpperCase();
     }
 

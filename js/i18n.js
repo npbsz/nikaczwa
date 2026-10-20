@@ -148,9 +148,9 @@ window.NIKA_I18N = {
 
     // --- Location section ---
     location_title: "Get Directions",
-    location_subtitle: "Find us in Warsaw – easy access, ample parking",
+    location_subtitle: "Find us in Częstochowa – easy access, ample parking",
     location_hours_title: "Opening Hours",
-    location_navigate_btn: "🧭 Navigate to Workshop",
+    location_navigate_btn: "Navigate to Workshop",
     location_today: "Today",
     location_closed_text: "Closed",
 
@@ -159,7 +159,7 @@ window.NIKA_I18N = {
     footer_links_title: "Quick Links",
     footer_contact_title: "Contact",
     footer_copyright: "© 2026 Nika Autoserwis. All rights reserved.",
-    footer_nip: "Tax ID",
+    footer_nip: "NIP",
 
     // --- Mobile bottom bar ---
     mobile_call: "Call",
@@ -229,14 +229,14 @@ window.NIKA_I18N = {
 
     // --- Location section ---
     location_title: "Як дістатися",
-    location_subtitle: "Знайдіть нас у Варшаві – зручний під'їзд, велике паркування",
+    location_subtitle: "Знайдіть нас у Ченстохові – зручний під'їзд, велике паркування",
     location_hours_title: "Години роботи",
-    location_navigate_btn: "🧭 Прокласти маршрут до сервісу",
+    location_navigate_btn: "Прокласти маршрут до сервісу",
     location_today: "Сьогодні",
     location_closed_text: "Зачинено",
 
     // --- Footer ---
-    footer_tagline: "Професійне автотехобслуговування у Варшаві",
+    footer_tagline: "Професійне автотехобслуговування у Ченстохові",
     footer_links_title: "Швидкі посилання",
     footer_contact_title: "Контакти",
     footer_copyright: "© 2026 Nika Autoserwis. Усі права захищені.",
