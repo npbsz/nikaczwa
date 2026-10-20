@@ -18,8 +18,8 @@ window.NIKA_CONFIG = {
       uk: "Повідомлення"
     },
     message: {
-      pl: "Przerwa urlopowa w dniach 15–22 sierpnia 2026. Zapraszamy do rezerwacji terminów po urlopie!",
-      en: "Vacation break from August 15–22, 2026. We welcome bookings after this period!",
+      pl: "Przerwa urlopowa w dniach 15-22 sierpnia 2026. Zapraszamy do rezerwacji terminów po urlopie!",
+      en: "Vacation break from August 15-22, 2026. We welcome bookings after this period!",
       uk: "Відпустка з 15 по 22 серпня 2026 р. Запрошуємо записуватися на терміни після відпустки!"
     }
   },
@@ -56,14 +56,14 @@ window.NIKA_CONFIG = {
     // ----------------------------------------------------------
     hours: [
       {
-        days: { pl: "Poniedziałek – Piątek", en: "Monday – Friday", uk: "Понеділок – П'ятниця" },
-        time: "08:00 – 17:00",
+        days: { pl: "Poniedziałek - Piątek", en: "Monday - Friday", uk: "Понеділок - П'ятниця" },
+        time: "08:00 - 17:00",
         openHour: 8,
         closeHour: 17,
         daysOfWeek: [1, 2, 3, 4, 5]
       },
       {
-        days: { pl: "Sobota – Niedziela", en: "Saturday – Sunday", uk: "Субота – Неділя" },
+        days: { pl: "Sobota - Niedziela", en: "Saturday - Sunday", uk: "Субота - Неділя" },
         time: { pl: "Zamknięte", en: "Closed", uk: "Зачинено" },
         openHour: null,
         closeHour: null,
