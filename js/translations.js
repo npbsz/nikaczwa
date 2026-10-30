@@ -7,21 +7,18 @@
 export const translations = {
 
   // ============================================================
-  //  POLISH
+  //  POLISH (pl)
   // ============================================================
   pl: {
-    // --- Navigation ---
     nav_services: "Usługi",
     nav_booking: "Rezerwacja",
     nav_location: "Godziny i dojazd",
     nav_call: "Zadzwoń",
 
-    // --- Language names (for dropdown) ---
     lang_pl: "Polski",
     lang_en: "English",
     lang_uk: "Українська",
 
-    // --- Hero section ---
     hero_headline: "Twój zaufany warsztat samochodowy",
     hero_subheadline: "Profesjonalna diagnostyka, naprawy i serwis. Szybko i rzetelnie.",
     hero_cta_book: "Zarezerwuj wizytę",
@@ -30,18 +27,15 @@ export const translations = {
     hero_tag_fast: "Szybka diagnostyka",
     hero_tag_expert: "Doświadczony mechanik",
 
-    // --- Open/closed status badge ---
     status_open: "Otwarte teraz",
     status_closed: "Zamknięte",
 
-    // --- Quick Info Bar ---
     info_address_label: "Adres",
     info_hours_label: "Godziny otwarcia",
     info_phone_label: "Telefon",
     info_copy: "Kopiuj",
     info_copied: "Skopiowano!",
 
-    // --- Services section ---
     services_title: "Nasze Usługi",
     services_subtitle: "Kompleksowa obsługa pojazdu pod jednym dachem",
     service_diag_title: "Diagnostyka Komputerowa",
@@ -57,7 +51,6 @@ export const translations = {
     service_tires_title: "Wulkanizacja i Opony",
     service_tires_desc: "Wymiana, wyważanie, naprawy opon - sezonowe i całoroczne.",
 
-    // --- Booking section ---
     booking_title: "Zarezerwuj Wizytę",
     booking_subtitle: "Wybierz wygodny termin przez nasz system rezerwacji online.",
     booking_open_new: "Otwórz stronę rezerwacji w nowym oknie",
@@ -69,7 +62,6 @@ export const translations = {
     booking_error_retry_btn: "Spróbuj ponownie",
     booking_error_external_btn: "Otwórz w nowej karcie",
 
-    // --- Location section ---
     location_title: "Jak Dojechać",
     location_subtitle: "Znajdziesz nas w Częstochowie - łatwy dojazd i parking",
     location_hours_title: "Godziny Otwarcia",
@@ -77,37 +69,31 @@ export const translations = {
     location_today: "Dziś",
     location_closed_text: "Zamknięte",
 
-    // --- Footer ---
     footer_tagline: "Profesjonalny serwis samochodowy w Częstochowie",
     footer_links_title: "Szybkie linki",
     footer_contact_title: "Kontakt",
     footer_copyright: "© 2026 Nika Autoserwis. Wszelkie prawa zastrzeżone.",
     footer_nip: "NIP",
 
-    // --- Mobile bottom bar ---
     mobile_call: "Zadzwoń",
     mobile_navigate: "Nawiguj",
 
-    // --- Notice banner ---
     notice_dismiss: "×",
   },
 
   // ============================================================
-  //  ENGLISH
+  //  ENGLISH (en)
   // ============================================================
   en: {
-    // --- Navigation ---
     nav_services: "Services",
     nav_booking: "Booking",
     nav_location: "Hours & Location",
     nav_call: "Call Us",
 
-    // --- Language names ---
     lang_pl: "Polski",
     lang_en: "English",
     lang_uk: "Українська",
 
-    // --- Hero section ---
     hero_headline: "Your Trusted Auto Repair Workshop",
     hero_subheadline: "Professional diagnostics, repairs, and servicing. Fast, reliable, guaranteed.",
     hero_cta_book: "Book an Appointment",
@@ -116,18 +102,15 @@ export const translations = {
     hero_tag_fast: "Fast Diagnostics",
     hero_tag_expert: "Experienced Mechanic",
 
-    // --- Open/closed status badge ---
     status_open: "Open Now",
     status_closed: "Closed",
 
-    // --- Quick Info Bar ---
     info_address_label: "Address",
     info_hours_label: "Opening Hours",
     info_phone_label: "Phone",
     info_copy: "Copy",
     info_copied: "Copied!",
 
-    // --- Services section ---
     services_title: "Our Services",
     services_subtitle: "Full vehicle care under one roof",
     service_diag_title: "Computer Diagnostics",
@@ -143,7 +126,6 @@ export const translations = {
     service_tires_title: "Tyre Fitting & Balancing",
     service_tires_desc: "Tyre changes, balancing, repairs - seasonal and all-year round.",
 
-    // --- Booking section ---
     booking_title: "Book an Appointment",
     booking_subtitle: "Choose a convenient time through our online booking system.",
     booking_open_new: "Open booking page in a new window",
@@ -155,7 +137,6 @@ export const translations = {
     booking_error_retry_btn: "Try again",
     booking_error_external_btn: "Open in a new tab",
 
-    // --- Location section ---
     location_title: "Get Directions",
     location_subtitle: "Find us in Częstochowa - easy access, ample parking",
     location_hours_title: "Opening Hours",
@@ -163,37 +144,31 @@ export const translations = {
     location_today: "Today",
     location_closed_text: "Closed",
 
-    // --- Footer ---
     footer_tagline: "Professional auto service in Częstochowa",
     footer_links_title: "Quick Links",
     footer_contact_title: "Contact",
     footer_copyright: "© 2026 Nika Autoserwis. All rights reserved.",
     footer_nip: "NIP",
 
-    // --- Mobile bottom bar ---
     mobile_call: "Call",
     mobile_navigate: "Navigate",
 
-    // --- Notice banner ---
     notice_dismiss: "×",
   },
 
   // ============================================================
-  //  UKRAINIAN
+  //  UKRAINIAN (uk)
   // ============================================================
   uk: {
-    // --- Navigation ---
     nav_services: "Послуги",
     nav_booking: "Запис",
     nav_location: "Години та маршрут",
     nav_call: "Зателефонувати",
 
-    // --- Language names ---
     lang_pl: "Polski",
     lang_en: "English",
     lang_uk: "Українська",
 
-    // --- Hero section ---
     hero_headline: "Ваш надійний автосервіс",
     hero_subheadline: "Професійна діагностика, ремонт та обслуговування. Швидко, чесно, з гарантією.",
     hero_cta_book: "Записатися на прийом",
@@ -202,18 +177,15 @@ export const translations = {
     hero_tag_fast: "Швидка діагностика",
     hero_tag_expert: "Досвідчені механіки",
 
-    // --- Open/closed status badge ---
     status_open: "Відчинено",
     status_closed: "Зачинено",
 
-    // --- Quick Info Bar ---
     info_address_label: "Адреса",
     info_hours_label: "Години роботи",
     info_phone_label: "Телефон",
     info_copy: "Копіювати",
     info_copied: "Скопійовано!",
 
-    // --- Services section ---
     services_title: "Наші Послуги",
     services_subtitle: "Повне обслуговування автомобіля під одним дахом",
     service_diag_title: "Комп'ютерна Діагностика",
@@ -229,7 +201,6 @@ export const translations = {
     service_tires_title: "Шиномонтаж та колеса",
     service_tires_desc: "Заміна, балансування, ремонт шин - сезонні та цілорічні послуги.",
 
-    // --- Booking section ---
     booking_title: "Записатися на прийом",
     booking_subtitle: "Оберіть зручний час через нашу онлайн-систему запису.",
     booking_open_new: "Відкрити сторінку запису в новому вікні",
@@ -241,7 +212,6 @@ export const translations = {
     booking_error_retry_btn: "Спробувати знову",
     booking_error_external_btn: "Відкрити в новій вкладці",
 
-    // --- Location section ---
     location_title: "Як дістатися",
     location_subtitle: "Знайдіть нас у Ченстохові - зручний під'їзд, велике паркування",
     location_hours_title: "Години роботи",
@@ -249,18 +219,15 @@ export const translations = {
     location_today: "Сьогодні",
     location_closed_text: "Зачинено",
 
-    // --- Footer ---
     footer_tagline: "Професійне автотехобслуговування у Ченстохові",
     footer_links_title: "Швидкі посилання",
     footer_contact_title: "Контакти",
     footer_copyright: "© 2026 Nika Autoserwis. Усі права захищені.",
     footer_nip: "NIP",
 
-    // --- Mobile bottom bar ---
     mobile_call: "Дзвонити",
     mobile_navigate: "Маршрут",
 
-    // --- Notice banner ---
     notice_dismiss: "×",
   }
 };

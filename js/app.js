@@ -15,26 +15,15 @@ import { initNavigation } from './modules/navigation.js';
 import { initNotice, updateNotice, showNotice, hideNotice } from './modules/notice.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Language system
   initI18n();
-
-  // 2. Status & schedule
   initStatus(config);
   initSchedule(config);
-
-  // 3. Vacation banner
   initNotice(config);
-
-  // 4. Page navigation & UI
   initNavigation();
   initAddressCopy(config);
   initNavigationButtons(config);
-
-  // 5. External integrations
   initBookings(config);
   initMap(config);
-
-  // 6. Set initial language (triggers 'nika:langchange' to populate dynamic text)
   setLanguage(getCurrentLang());
 });
 

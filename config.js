@@ -8,10 +8,9 @@ export const config = {
 
   // ----------------------------------------------------------
   //  VACATION / SPECIAL NOTICE BANNER
-  //  Set active: true to show the banner, false to hide it.
   // ----------------------------------------------------------
   vacationNotice: {
-    active: false, // <-- ZMIEŃ NA false aby ukryć baner / CHANGE TO false to hide banner
+    active: false,
     badge: {
       pl: "Komunikat",
       en: "Notice",
@@ -36,7 +35,7 @@ export const config = {
     tagline: {
       pl: "Profesjonalny serwis samochodowy w Częstochowie",
       en: "Professional Auto Service in Częstochowa",
-      uk: "Професійне автотехобслуговування у Ченстохові"
+      uk: "Професійне автоteхобслуговування у Ченстохові"
     },
     phone: "+48606791204",
     phoneDisplay: "+48 606 791 204",
@@ -51,8 +50,6 @@ export const config = {
 
     // ----------------------------------------------------------
     //  OPENING HOURS
-    //  daysOfWeek: 0=Sunday, 1=Monday, ..., 6=Saturday
-    //  Set openHour/closeHour to null for closed days
     // ----------------------------------------------------------
     hours: [
       {
@@ -76,21 +73,12 @@ export const config = {
   //  INTEGRATIONS
   // ----------------------------------------------------------
   integrations: {
-    // Microsoft 365 Bookings - replace with your real Bookings page URL
     microsoftBookingsUrl: "https://outlook.office365.com/owa/calendar/NikaAutoserwis@example.com/bookings/",
-
-    // Google Maps - replace coordinates or query with your actual address
     mapsDestinationQuery: "50.81929495977339, 19.128152891899784",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.6363495964406!2d19.125681776883184!3d50.81937596073161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5afb1b83635%3A0x84c0d093dc95d3c5!2sNIKA%20wymiana%20oleju%2C%20mechanika!5e0!3m2!1sde!2sde!4v1792503973581!5m2!1sde!2sde"
   }
 };
 
-// Expose on window for backward compatibility
-if (typeof window !== 'undefined') {
-  window.NIKA_CONFIG = config;
-}
-
-// Expose on window for backward compatibility
 if (typeof window !== 'undefined') {
   window.NIKA_CONFIG = config;
 }

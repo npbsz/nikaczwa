@@ -1,20 +1,10 @@
 /* ============================================================
    NIKA AUTOSERWIS – Master Stylesheet Manifest (css/styles.css)
-   Consolidated 4-tier modular architecture (< 300 lines per file)
    ============================================================ */
 
-/* 1. Base Layer & Primitives (Variables, Reset, Typography, Layout, Utilities) */
 @import url('./base.css');
-
-/* 2. UI Components (Buttons, Cards, Badges, Status, Dropdowns, Notice) */
 @import url('./components.css');
-
-/* 3. Global Navigation & Chrome (Header, Nav Menu, Mobile Bar, Footer) */
 @import url('./navigation.css');
-
-/* 4. Page Content Sections (Hero, Services, Booking, Location & Maps) */
 @import url('./sections.css');
 
-/* 4. Page Content Sections (Hero, Services, Booking, Location & Maps) */
-@import url('./sections.css');
 
