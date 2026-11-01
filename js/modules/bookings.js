@@ -31,11 +31,11 @@ export function initBookings(config) {
 
   const currentConfig = activeConfig || window.NIKA_CONFIG || {};
   const bookingsUrl = currentConfig.integrations && currentConfig.integrations.microsoftBookingsUrl;
-  const phone = (currentConfig.business && currentConfig.business.phone) || '+48606791204';
-  const phoneDisp = (currentConfig.business && currentConfig.business.phoneDisplay) || '+48 606 791 204';
+  const phone = currentConfig.business && currentConfig.business.phone;
+  const phoneDisp = currentConfig.business && currentConfig.business.phoneDisplay;
 
-  if (phoneLink) phoneLink.href = 'tel:' + phone;
-  if (phoneDisplay) phoneDisplay.textContent = phoneDisp;
+  if (phoneLink && phone) phoneLink.href = 'tel:' + phone;
+  if (phoneDisplay && phoneDisp) phoneDisplay.textContent = phoneDisp;
 
   let loadTimeout = null;
   let isConnected = false;
@@ -116,4 +116,3 @@ export function initBookings(config) {
 
   attemptLoad();
 }
-

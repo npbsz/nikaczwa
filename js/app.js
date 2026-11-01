@@ -14,7 +14,30 @@ import { initMap, initNavigationButtons, initAddressCopy } from './modules/map.j
 import { initNavigation } from './modules/navigation.js';
 import { initNotice, updateNotice, showNotice, hideNotice } from './modules/notice.js';
 
+function initBusinessInfo(config) {
+  const business = config.business;
+  const phoneHref = 'tel:' + business.phone;
+
+  ['hero-address-text', 'location-address-text', 'footer-address'].forEach(function (id) {
+    const element = document.getElementById(id);
+    if (element) element.textContent = business.address.full;
+  });
+
+  ['header-phone-link', 'hero-phone-link', 'location-phone-link', 'footer-phone', 'mobile-call-btn'].forEach(function (id) {
+    const element = document.getElementById(id);
+    if (!element) return;
+
+    element.href = phoneHref;
+    if (id === 'header-phone-link') {
+      element.title = business.phoneDisplay;
+    } else if (id !== 'mobile-call-btn') {
+      element.textContent = business.phoneDisplay;
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  initBusinessInfo(config);
   initI18n();
   initStatus(config);
   initSchedule(config);
