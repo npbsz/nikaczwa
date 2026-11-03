@@ -20,7 +20,7 @@ export const translations = {
     lang_uk: "Українська",
 
     hero_headline: "Twój zaufany warsztat samochodowy",
-    hero_subheadline: "Profesjonalna diagnostyka, naprawy i serwis. Szybko i rzetelnie.",
+    hero_subheadline: "Profesjonalna diagnostyka, naprawy i serwis.\nSzybko i rzetelnie.",
     hero_cta_book: "Zarezerwuj wizytę",
     hero_cta_directions: "Jak dojechać",
     hero_tag_quality: "Gwarancja jakości",
@@ -95,7 +95,7 @@ export const translations = {
     lang_uk: "Українська",
 
     hero_headline: "Your Trusted Auto Repair Workshop",
-    hero_subheadline: "Professional diagnostics, repairs, and servicing. Fast, reliable, guaranteed.",
+    hero_subheadline: "Professional diagnostics, repairs, and servicing.\nFast, reliable, guaranteed.",
     hero_cta_book: "Book an Appointment",
     hero_cta_directions: "Get Directions",
     hero_tag_quality: "Quality Guaranteed",
@@ -153,7 +153,7 @@ export const translations = {
     mobile_call: "Call",
     mobile_navigate: "Navigate",
 
-    notice_dismiss: "×",
+    notice_dismiss: "x",
   },
 
   // ============================================================
@@ -228,7 +228,7 @@ export const translations = {
     mobile_call: "Дзвонити",
     mobile_navigate: "Маршрут",
 
-    notice_dismiss: "×",
+    notice_dismiss: "x",
   }
 };
 

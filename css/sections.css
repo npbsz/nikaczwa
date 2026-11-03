@@ -26,6 +26,7 @@
 .hero__headline span { color: var(--color-primary); }
 
 .hero__subheadline {
+  white-space: pre-line;
   font-size: var(--text-lg);
   color: var(--color-text-muted);
   margin-bottom: 2rem;
