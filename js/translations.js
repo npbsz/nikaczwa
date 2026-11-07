@@ -31,7 +31,7 @@ export const translations = {
     status_closed: "Zamknięte",
 
     info_address_label: "Adres",
-    info_hours_label: "Godziny otwarcia",
+    info_hours_label: "Godziny otwarcia dzisiaj",
     info_phone_label: "Telefon",
     info_copy: "Kopiuj",
     info_copied: "Skopiowano!",
@@ -107,7 +107,7 @@ export const translations = {
     status_closed: "Closed",
 
     info_address_label: "Address",
-    info_hours_label: "Opening Hours",
+    info_hours_label: "Opening Hours Today",
     info_phone_label: "Phone",
     info_copy: "Copy",
     info_copied: "Copied!",
@@ -183,7 +183,7 @@ export const translations = {
     status_closed: "Зачинено",
 
     info_address_label: "Адреса",
-    info_hours_label: "Години роботи",
+    info_hours_label: "Години роботи сьогодні",
     info_phone_label: "Телефон",
     info_copy: "Копіювати",
     info_copied: "Скопійовано!",
