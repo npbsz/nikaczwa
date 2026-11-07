@@ -79,6 +79,7 @@ export const translations = {
     mobile_navigate: "Nawiguj",
 
     notice_dismiss: "×",
+    notice_dismiss_aria: "Zamknij komunikat",
   },
 
   // ============================================================
@@ -154,6 +155,7 @@ export const translations = {
     mobile_navigate: "Navigate",
 
     notice_dismiss: "x",
+    notice_dismiss_aria: "Close notice",
   },
 
   // ============================================================
@@ -229,6 +231,7 @@ export const translations = {
     mobile_navigate: "Маршрут",
 
     notice_dismiss: "x",
+    notice_dismiss_aria: "Закрити повідомлення",
   }
 };
 
@@ -236,4 +239,3 @@ export const translations = {
 if (typeof window !== 'undefined') {
   window.NIKA_I18N = translations;
 }
-

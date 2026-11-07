@@ -68,7 +68,7 @@ function _updateLangDropdown(lang, t) {
  * Applies a language to the entire page:
  *   - Saves choice to localStorage
  *   - Updates <html lang="…">
- *   - Replaces all [data-i18n], [data-i18n-html], [data-i18n-placeholder],
+ *   - Replaces all [data-i18n], [data-i18n-placeholder],
  *     and [data-i18n-aria] elements
  *   - Updates language dropdown display
  *   - Dispatches 'nika:langchange' custom event to decouple dynamic components
@@ -92,12 +92,6 @@ export function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(function (el) {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) el.textContent = t[key];
-  });
-
-  // --- [data-i18n-html] → innerHTML (use sparingly, trusted strings only) ---
-  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
-    const key = el.getAttribute('data-i18n-html');
-    if (t[key] !== undefined) el.innerHTML = t[key];
   });
 
   // --- [data-i18n-placeholder] → placeholder attribute ---
@@ -179,4 +173,3 @@ function initLangDropdown() {
 export function initI18n() {
   initLangDropdown();
 }
-

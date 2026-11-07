@@ -7,8 +7,10 @@
  */
 
 import { getCurrentLang, getTranslations } from './i18n.js';
+import { getWarsawTime } from './time.js';
 
 let activeConfig = null;
+let refreshTimer = null;
 
 /**
  * Determines whether the garage is currently open, using Warsaw local time
@@ -23,12 +25,7 @@ export function getGarageStatus(cfg) {
   const t = getTranslations(lang);
 
   // Get current time in Europe/Warsaw timezone
-  const now = new Date();
-  const warsawStr = now.toLocaleString('en-US', { timeZone: 'Europe/Warsaw' });
-  const warsaw = new Date(warsawStr);
-  const currentDay = warsaw.getDay();     // 0=Sun … 6=Sat
-  const currentHour = warsaw.getHours();
-  const currentMinute = warsaw.getMinutes();
+  const { day: currentDay, hour: currentHour, minute: currentMinute } = getWarsawTime();
 
   // Find today's schedule entry
   const hours = (config.business && config.business.hours) || [];
@@ -59,10 +56,13 @@ export function updateGarageStatus() {
     if (textEl) {
       textEl.textContent = status.text;
     } else {
-      badge.innerHTML = `
-        <span class="status-badge__dot" aria-hidden="true"></span>
-        <span class="status-badge__text">${status.text}</span>
-      `;
+      const dot = document.createElement('span');
+      dot.className = 'status-badge__dot';
+      dot.setAttribute('aria-hidden', 'true');
+      const newTextEl = document.createElement('span');
+      newTextEl.className = 'status-badge__text';
+      newTextEl.textContent = status.text;
+      badge.replaceChildren(dot, newTextEl);
     }
     badge.classList.toggle('status-open', status.open);
     badge.classList.toggle('status-closed', !status.open);
@@ -77,7 +77,9 @@ export function updateGarageStatus() {
  */
 function startStatusRefresh() {
   updateGarageStatus();
-  setInterval(updateGarageStatus, 60 * 1000);
+  if (!refreshTimer) {
+    refreshTimer = setInterval(updateGarageStatus, 60 * 1000);
+  }
 }
 
 /**
@@ -96,4 +98,3 @@ export function initStatus(config) {
 
   startStatusRefresh();
 }
-

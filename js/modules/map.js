@@ -60,6 +60,11 @@ export function initAddressCopy(config) {
       const address = (currentConfig.business && currentConfig.business.address && currentConfig.business.address.full) || '';
       if (!address) return;
 
+      if (!navigator.clipboard || typeof navigator.clipboard.writeText !== 'function') {
+        console.warn('[NikaApp] Clipboard API is unavailable.');
+        return;
+      }
+
       navigator.clipboard.writeText(address).then(function () {
         const lang = getCurrentLang();
         const t = getTranslations(lang);
@@ -79,4 +84,3 @@ export function initAddressCopy(config) {
     });
   });
 }
-

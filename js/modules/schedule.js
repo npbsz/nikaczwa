@@ -6,6 +6,7 @@
  */
 
 import { getCurrentLang, getTranslations } from './i18n.js';
+import { getWarsawTime } from './time.js';
 
 let activeConfig = null;
 
@@ -21,10 +22,7 @@ export function getTodayHoursText(cfg) {
   const lang = getCurrentLang();
   const t = getTranslations(lang);
 
-  const now = new Date();
-  const warsawStr = now.toLocaleString('en-US', { timeZone: 'Europe/Warsaw' });
-  const warsaw = new Date(warsawStr);
-  const currentDay = warsaw.getDay();
+  const { day: currentDay } = getWarsawTime();
 
   const hours = (config.business && config.business.hours) || [];
   const todayEntry = hours.find(function (entry) {
@@ -65,10 +63,7 @@ export function renderHoursTable() {
   const config = activeConfig || window.NIKA_CONFIG || {};
 
   // Determine today's day-of-week in Warsaw time
-  const now = new Date();
-  const warsawStr = now.toLocaleString('en-US', { timeZone: 'Europe/Warsaw' });
-  const warsaw = new Date(warsawStr);
-  const currentDay = warsaw.getDay();
+  const { day: currentDay } = getWarsawTime();
 
   tbody.innerHTML = ''; // Clear existing rows
 
@@ -135,4 +130,3 @@ export function initSchedule(config) {
   renderTodayHours();
   renderHoursTable();
 }
-

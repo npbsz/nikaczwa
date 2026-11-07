@@ -32,23 +32,20 @@ function applyContent(banner, lang) {
 
   const t = getTranslations(lang);
 
-  // Badge label
-  const badgeEl = banner.querySelector('.notice-badge');
-  if (badgeEl) {
-    badgeEl.textContent = (vn.badge && (vn.badge[lang] || vn.badge['pl'])) || '';
-  }
-
-  // Main message
-  const msgEl = banner.querySelector('.notice-message');
-  if (msgEl) {
-    msgEl.textContent = (vn.message && (vn.message[lang] || vn.message['pl'])) || '';
+  const message = (vn.message && (vn.message[lang] || vn.message['pl'])) || '';
+  const badge = (vn.badge && (vn.badge[lang] || vn.badge['pl'])) || '';
+  const messageEl = banner.querySelector('#notice-text');
+  if (messageEl) {
+    messageEl.textContent = badge ? badge + ': ' + message : message;
   }
 
   // Dismiss button label
   const dismissEl = banner.querySelector('.notice-dismiss');
   if (dismissEl) {
-    dismissEl.textContent = t.notice_dismiss || '×';
-    dismissEl.setAttribute('aria-label', t.notice_dismiss || '×');
+    const dismissLabel = t.notice_dismiss_aria || 'Close notice';
+    const dismissIcon = t.notice_dismiss || '×';
+    dismissEl.textContent = dismissIcon;
+    dismissEl.setAttribute('aria-label', dismissLabel);
   }
 }
 
@@ -131,4 +128,3 @@ if (typeof window !== 'undefined') {
     hide: hideNotice
   };
 }
-

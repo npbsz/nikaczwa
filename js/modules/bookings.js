@@ -22,20 +22,10 @@ export function initBookings(config) {
   const errorNotice = document.getElementById('bookings-error-notice');
   const fallbackContainer = document.querySelector('.booking-fallback');
   const fallbackBtn = document.getElementById('booking-fallback-btn');
-  const retryBtn = document.getElementById('booking-retry-btn');
-  const externalBtn = document.getElementById('booking-error-external-btn');
-  const phoneLink = document.getElementById('booking-error-phone-link');
-  const phoneDisplay = document.getElementById('booking-error-phone-display');
-
   if (!iframe) return;
 
   const currentConfig = activeConfig || window.NIKA_CONFIG || {};
   const bookingsUrl = currentConfig.integrations && currentConfig.integrations.microsoftBookingsUrl;
-  const phone = currentConfig.business && currentConfig.business.phone;
-  const phoneDisp = currentConfig.business && currentConfig.business.phoneDisplay;
-
-  if (phoneLink && phone) phoneLink.href = 'tel:' + phone;
-  if (phoneDisplay && phoneDisp) phoneDisplay.textContent = phoneDisp;
 
   let loadTimeout = null;
   let isConnected = false;
@@ -44,7 +34,7 @@ export function initBookings(config) {
     if (loadTimeout) clearTimeout(loadTimeout);
     if (overlay) overlay.style.display = 'none';
     iframe.style.display = 'none';
-    if (errorNotice) errorNotice.style.display = 'flex';
+    if (errorNotice) errorNotice.hidden = false;
     if (fallbackContainer) fallbackContainer.style.display = 'none';
   }
 
@@ -59,7 +49,7 @@ export function initBookings(config) {
     }
     iframe.style.display = 'block';
     iframe.style.opacity = '1';
-    if (errorNotice) errorNotice.style.display = 'none';
+    if (errorNotice) errorNotice.hidden = true;
     if (fallbackContainer) fallbackContainer.style.display = 'flex';
   }
 
@@ -76,9 +66,7 @@ export function initBookings(config) {
 
     // Valid URL configured: setup links
     if (fallbackBtn) fallbackBtn.href = bookingsUrl;
-    if (externalBtn) externalBtn.href = bookingsUrl;
-
-    if (errorNotice) errorNotice.style.display = 'none';
+    if (errorNotice) errorNotice.hidden = true;
     if (overlay) {
       overlay.style.display = 'flex';
       overlay.style.opacity = '1';
@@ -105,14 +93,6 @@ export function initBookings(config) {
   iframe.addEventListener('error', function () {
     showBookingError();
   });
-
-  if (retryBtn) {
-    retryBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      isConnected = false;
-      attemptLoad();
-    });
-  }
 
   attemptLoad();
 }
