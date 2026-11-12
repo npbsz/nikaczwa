@@ -1,7 +1,7 @@
 /**
  * ============================================================
  *  NIKA AUTOSERWIS - NAVIGATION MODULE (js/modules/navigation.js)
- *  Mobile hamburger menu toggle and offset smooth scrolling.
+ *  Mobile hamburger menu toggle
  * ============================================================
  */
 
