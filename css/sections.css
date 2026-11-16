@@ -4,7 +4,12 @@
 
 /* ── 1. Hero Section ─────────────────────────────────────── */
 .hero {
-  background: var(--color-surface-1);
+  background-image:
+    linear-gradient(90deg, rgba(10, 22, 40, 0.88), rgba(10, 22, 40, 0.55)),
+    url('../assets/background.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 100px;
   padding-bottom: 80px;
 }
@@ -19,16 +24,16 @@
 .hero__headline {
   font-size: var(--text-5xl);
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-white);
   line-height: 1.1;
   margin-bottom: 1.25rem;
 }
-.hero__headline span { color: var(--color-primary); }
+.hero__headline span { color: var(--color-accent); }
 
 .hero__subheadline {
   white-space: pre-line;
   font-size: var(--text-lg);
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.92);
   margin-bottom: 2rem;
   max-width: 520px;
 }
@@ -84,16 +89,52 @@
   gap: 1.5rem;
 }
 
+.service-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-white);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.88), rgba(1, 95, 180, 0.68));
+}
+
+.service-card:nth-child(1) { background-image: url('../assets/cardbckgrnd/diagnostics.webp'); }
+.service-card:nth-child(2) { background-image: url('../assets/cardbckgrnd/brakechange.webp'); }
+.service-card:nth-child(3) { background-image: url('../assets/cardbckgrnd/oilchhange.webp'); }
+.service-card:nth-child(4) { background-image: url('../assets/cardbckgrnd/geometry.webp'); }
+.service-card:nth-child(5) { background-image: url('../assets/cardbckgrnd/aircon.webp'); }
+.service-card:nth-child(6) { background-image: url('../assets/cardbckgrnd/tyrechange.webp'); }
+
+.service-card__icon,
+.service-card__title,
+.service-card__desc {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card__icon {
+  background: rgba(255, 255, 255, 0.9);
+}
+
 .service-card__title {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .service-card__desc {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.6;
 }
 
