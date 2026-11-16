@@ -97,6 +97,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--color-white);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.service-card:hover,
+.service-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card--featured {
+  border: 2px solid var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card--featured:hover,
+.service-card--featured:focus-within {
+  transform: scale(1.15) translateY(-4px);
+  box-shadow: 0 12px 36px rgba(1, 95, 180, 0.24);
 }
 
 .service-card::before {
@@ -136,6 +154,15 @@
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.92);
   line-height: 1.6;
+}
+
+@media (min-width: 1025px) {
+  .service-card:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .service-card:nth-child(2) { grid-column: 3; grid-row: 1; }
+  .service-card--featured { grid-column: 2; grid-row: 1; transform: scale(1.15); }
+  .service-card:nth-child(4) { grid-column: 1; grid-row: 2; }
+  .service-card:nth-child(5) { grid-column: 2; grid-row: 2; }
+  .service-card:nth-child(6) { grid-column: 3; grid-row: 2; }
 }
 
 /* ── 3. Partner Brands Swiper ───────────────────────────── */
@@ -284,6 +311,7 @@
 @media (max-width: 1024px) {
   .hero__inner { grid-template-columns: 1fr 340px; gap: 2rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-card--featured { transform: none; }
   .swiper-slide { flex-basis: calc((100% - 60px) / 3); }
 }
 
