@@ -51,6 +51,7 @@
   color: var(--color-primary);
   border-color: var(--color-primary);
 }
+.btn-secondary { border-radius: var(--radius-sm); }
 .btn-secondary:hover, .btn-navigate:hover,
 .btn-secondary:focus-visible, .btn-navigate:focus-visible {
   background: var(--color-surface-2);
@@ -133,6 +134,7 @@
   border: 1px solid rgba(255, 255, 255, 0.25);
   transition: background var(--transition-base), box-shadow var(--transition-base);
 }
+.status-badge { border-radius: var(--radius-sm); }
 .status-badge--open, .status-badge.status-open {
   background: linear-gradient(135deg, #16a34a, #15803d);
   box-shadow: 0 4px 14px rgba(22, 163, 74, 0.4), 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -238,7 +240,7 @@
 .lang-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 5px;
   width: 104px; max-width: 104px; flex-shrink: 0; background: transparent;
-  border: 1.5px solid var(--color-border); border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-sm);
   padding: 6px 8px; font-size: var(--text-sm); font-weight: 500; color: var(--color-text);
   cursor: pointer; transition: border-color var(--transition-fast), background var(--transition-fast);
   white-space: nowrap;
