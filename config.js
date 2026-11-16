@@ -10,16 +10,16 @@ export const config = {
   //  VACATION / SPECIAL NOTICE BANNER
   // ----------------------------------------------------------
   vacationNotice: {
-    active: false,
+    active: true,
     badge: {
       pl: "Komunikat",
       en: "Notice",
       uk: "Повідомлення"
     },
     message: {
-      pl: "Przerwa urlopowa w dniach 15-22 sierpnia 2026. Zapraszamy do rezerwacji terminów po urlopie!",
-      en: "Vacation break from August 15-22, 2026. We welcome bookings after this period!",
-      uk: "Відпустка з 15 по 22 серпня 2026 р. Запрошуємо записуватися на терміни після відпустки!"
+      pl: "This website is currently in active development. You may encounter bugs, incomplete features, or placeholder content.",
+      en: "This website is currently in active development. You may encounter bugs, incomplete features, or placeholder content.",
+      uk: "This website is currently in active development. You may encounter bugs, incomplete features, or placeholder content."
     }
   },
 

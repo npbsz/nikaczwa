@@ -31,6 +31,10 @@ function applyContent(banner, lang) {
   if (!vn) return;
 
   const t = getTranslations(lang);
+  const dismissEl = banner.querySelector('.notice-dismiss');
+  const isPersistent = vn.active === true;
+
+  if (dismissEl && isPersistent) dismissEl.remove();
 
   const message = (vn.message && (vn.message[lang] || vn.message['pl'])) || '';
   const badge = (vn.badge && (vn.badge[lang] || vn.badge['pl'])) || '';
@@ -40,8 +44,7 @@ function applyContent(banner, lang) {
   }
 
   // Dismiss button label
-  const dismissEl = banner.querySelector('.notice-dismiss');
-  if (dismissEl) {
+  if (dismissEl && !isPersistent) {
     const dismissLabel = t.notice_dismiss_aria || 'Close notice';
     const dismissIcon = t.notice_dismiss || '×';
     dismissEl.textContent = dismissIcon;
@@ -56,7 +59,7 @@ function applyContent(banner, lang) {
 function attachDismiss(banner) {
   if (dismissAttached) return;
   const btn = banner.querySelector('.notice-dismiss');
-  if (btn) {
+  if (btn && !btn.hidden) {
     btn.addEventListener('click', function () {
       hideNotice();
     });
