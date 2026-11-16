@@ -13,6 +13,7 @@ import { initBookings } from './modules/bookings.js';
 import { initMap, initNavigationButtons, initAddressCopy } from './modules/map.js';
 import { initNavigation } from './modules/navigation.js';
 import { initNotice, updateNotice, showNotice, hideNotice } from './modules/notice.js';
+import { initSwiper } from './modules/swiper.js';
 
 function initBusinessInfo(config) {
   const business = config.business;
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigationButtons(config);
   initBookings(config);
   initMap(config);
+  initSwiper();
   setLanguage(getCurrentLang());
 });
 

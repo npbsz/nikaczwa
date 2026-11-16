@@ -97,6 +97,48 @@
   line-height: 1.6;
 }
 
+/* ── 3. Partner Brands Swiper ───────────────────────────── */
+.brands-swiper-section {
+  background: var(--color-surface-1);
+  border-block: 1px solid var(--color-border);
+  padding-block: 1rem;
+}
+
+.brands-swiper__subtitle {
+  color: #a29a98;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.swiper-brands {
+  overflow: hidden;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 30px;
+  padding-block: 1rem;
+  transition: transform 400ms ease;
+  will-change: transform;
+}
+
+.swiper-slide {
+  flex: 0 0 calc((100% - 90px) / 4);
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 48px;
+  object-fit: contain;
+}
+
 /* ── 3. Online Booking Section ───────────────────────────── */
 .booking-section {
   background: var(--color-surface-1);
@@ -270,6 +312,7 @@
 @media (max-width: 1024px) {
   .hero__inner { grid-template-columns: 1fr 340px; gap: 2rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .swiper-slide { flex-basis: calc((100% - 60px) / 3); }
 }
 
 @media (max-width: 767px) {
@@ -279,6 +322,8 @@
   .hero__subheadline { max-width: 100%; }
 
   .services-grid { grid-template-columns: 1fr; }
+  .swiper-wrapper { gap: 16px; }
+  .swiper-slide { flex-basis: calc((100% - 16px) / 2); }
 
   .booking-iframe-container, .booking-iframe-container iframe {
     height: 500px;

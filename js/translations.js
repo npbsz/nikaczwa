@@ -51,6 +51,8 @@ export const translations = {
     service_tires_title: "Wulkanizacja i Opony",
     service_tires_desc: "Wymiana, wyważanie, naprawy opon - sezonowe i całoroczne.",
 
+    brands_subtitle: "Wysokiej jakości serwis z wykorzystaniem certyfikowanych części i środków smarnych wiodących marek.",
+
     booking_title: "Zarezerwuj Wizytę",
     booking_subtitle: "Wybierz wygodny termin przez nasz system rezerwacji online.",
     booking_open_new: "Otwórz stronę rezerwacji w nowym oknie",
@@ -127,6 +129,8 @@ export const translations = {
     service_tires_title: "Tyre Fitting & Balancing",
     service_tires_desc: "Tyre changes, balancing, repairs - seasonal and all-year round.",
 
+    brands_subtitle: "Quality service using certified parts and lubricants from leading brands",
+
     booking_title: "Book an Appointment",
     booking_subtitle: "Choose a convenient time through our online booking system.",
     booking_open_new: "Open booking page in a new window",
@@ -202,6 +206,8 @@ export const translations = {
     service_ac_desc: "Заправка фреону, дезінфекція та повна перевірка системи кондиціювання.",
     service_tires_title: "Шиномонтаж та колеса",
     service_tires_desc: "Заміна, балансування, ремонт шин - сезонні та цілорічні послуги.",
+
+    brands_subtitle: "Якісний сервіс із використанням сертифікованих запчастин і мастильних матеріалів від провідних брендів",
 
     booking_title: "Записатися на прийом",
     booking_subtitle: "Оберіть зручний час через нашу онлайн-систему запису.",
