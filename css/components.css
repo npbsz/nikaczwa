@@ -4,8 +4,7 @@
    ============================================================ */
 
 /* ── 1. Buttons ──────────────────────────────────────────── */
-.btn, .btn-primary, .btn-secondary, .btn-navigate,
-.booking-error-call, .btn-booking-retry, .btn-booking-external, .booking-fallback-btn a {
+.btn, .btn-primary, .btn-secondary, .btn-navigate {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -22,23 +21,22 @@
   line-height: 1.2;
 }
 
-.btn:active, .btn-primary:active, .btn-secondary:active, .btn-navigate:active,
-.booking-error-call:active, .btn-booking-retry:active, .btn-booking-external:active {
+.btn:active, .btn-primary:active, .btn-secondary:active, .btn-navigate:active {
   transform: translateY(0);
 }
 
-.btn-primary, .booking-error-call, .btn-secondary, .btn-navigate {
+.btn-primary, .btn-secondary, .btn-navigate {
   padding: 12px 28px;
   border-radius: var(--radius-pill);
 }
 
-.btn-primary, .booking-error-call {
+.btn-primary {
   background: var(--color-primary);
   color: var(--color-white);
   border-color: var(--color-primary);
 }
-.btn-primary:hover, .booking-error-call:hover,
-.btn-primary:focus-visible, .booking-error-call:focus-visible {
+.btn-primary:hover,
+.btn-primary:focus-visible {
   background: var(--color-secondary);
   border-color: var(--color-secondary);
   color: var(--color-white);
@@ -60,21 +58,6 @@
   transform: translateY(-2px);
 }
 
-.btn-booking-retry, .btn-booking-external, .booking-fallback-btn a {
-  background: var(--color-surface-1);
-  color: var(--color-text);
-  border-color: var(--color-border);
-  border-radius: var(--radius-pill);
-  padding: 10px 18px;
-  font-size: var(--text-sm);
-}
-.btn-booking-retry:hover, .btn-booking-external:hover, .booking-fallback-btn a:hover {
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-  background: var(--color-white);
-  transform: translateY(-1px);
-}
-
 .btn-navigate__icon {
   display: inline-flex;
   align-items: center;
@@ -83,7 +66,7 @@
 }
 
 /* ── 2. Cards & Containers ───────────────────────────────── */
-.card, .hero-card, .service-card, .booking-error-notice {
+.card, .hero-card, .service-card {
   background: var(--color-white); border-radius: var(--radius-md); border: 1.5px solid var(--color-border);
   box-shadow: none; padding: 32px 28px; display: flex; flex-direction: column; gap: 1.25rem;
 }
@@ -111,7 +94,7 @@
 }
 
 /* ── 3. Badges, Pills & Live Status ──────────────────────── */
-.badge, .pill, .status-badge, .today-badge, .copy-address, .booking-error-notice__badge {
+.badge, .pill, .status-badge, .today-badge, .copy-address {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -185,14 +168,6 @@
   cursor: pointer;
 }
 .copy-address:hover { background: rgba(255, 255, 255, 0.32); }
-
-.booking-error-notice__badge {
-  font-size: var(--text-xs);
-  padding: 6px 16px;
-  background: #FEE2E2;
-  color: var(--color-danger);
-  border: 1px solid rgba(227, 0, 1, 0.2);
-}
 
 /* ── 4. Notice Banner ────────────────────────────────────── */
 .notice-banner {
