@@ -77,6 +77,19 @@
 }
 .hero-card__phone-link:hover { color: var(--color-secondary); }
 
+.hero-card__address-link,
+.hero-card__hours-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.hero-card__address-link:hover,
+.hero-card__address-link:focus-visible,
+.hero-card__hours-link:hover,
+.hero-card__hours-link:focus-visible {
+  color: var(--color-secondary);
+}
+
 /* ── 2. Services Section ─────────────────────────────────── */
 .services-section {
   background: var(--color-white);
