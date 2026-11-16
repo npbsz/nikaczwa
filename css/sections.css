@@ -398,9 +398,14 @@
   .swiper-wrapper { gap: 16px; }
   .swiper-slide { flex-basis: calc((100% - 16px) / 2); }
 
-  .booking-iframe-container, .cal-inline-embed {
-    height: 500px;
-    max-height: 500px;
+  .booking-iframe-container {
+    height: 700px;
+    max-height: 700px;
+    overflow: visible;
+  }
+  .cal-inline-embed {
+    height: 700px;
+    max-height: 700px;
   }
 
   .location-grid { grid-template-columns: 1fr; gap: 2rem; }
