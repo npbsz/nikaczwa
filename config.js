@@ -73,7 +73,6 @@ export const config = {
   //  INTEGRATIONS
   // ----------------------------------------------------------
   integrations: {
-    microsoftBookingsUrl: "https://outlook.office365.com/owa/calendar/NikaAutoserwis@example.com/bookings/",
     mapsDestinationQuery: "50.81929495977339, 19.128152891899784",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.6363495964406!2d19.125681776883184!3d50.81937596073161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710b5afb1b83635%3A0x84c0d093dc95d3c5!2sNIKA%20wymiana%20oleju%2C%20mechanika!5e0!3m2!1sde!2sde!4v1792503973581!5m2!1sde!2sde"
   }

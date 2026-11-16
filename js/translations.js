@@ -19,8 +19,8 @@ export const translations = {
     lang_en: "English",
     lang_uk: "Українська",
 
-    hero_headline: "Twój zaufany warsztat samochodowy",
-    hero_subheadline: "Profesjonalna diagnostyka, naprawy i serwis.\nSzybko i rzetelnie.",
+    hero_headline: "Profesjonalna naprawa samochodów, poparta ponad 30-letnim doświadczeniem",
+    hero_subheadline: "Czynny od 2019\n Profesjonalna diagnostyka, naprawy i serwis.\nSzybko i rzetelnie.",
     hero_cta_book: "Zarezerwuj wizytę",
     hero_cta_directions: "Jak dojechać",
     hero_tag_quality: "Gwarancja jakości",
@@ -97,8 +97,8 @@ export const translations = {
     lang_en: "English",
     lang_uk: "Українська",
 
-    hero_headline: "Your Trusted Auto Repair Workshop",
-    hero_subheadline: "Professional diagnostics, repairs, and servicing.\nFast, reliable, guaranteed.",
+    hero_headline: "Expert Auto Repair, Backed by 30+ Years of Experience",
+    hero_subheadline: "Established in 2019. Professional diagnostics, repairs, and maintenance.\nFast, reliable, guaranteed.",
     hero_cta_book: "Book an Appointment",
     hero_cta_directions: "Get Directions",
     hero_tag_quality: "Quality Guaranteed",
@@ -175,8 +175,8 @@ export const translations = {
     lang_en: "English",
     lang_uk: "Українська",
 
-    hero_headline: "Ваш надійний автосервіс",
-    hero_subheadline: "Професійна діагностика, ремонт та обслуговування. Швидко, чесно, з гарантією.",
+    hero_headline: "Професійний автосервіс — понад 30 років досвіду",
+    hero_subheadline: "Засновано у 2019 році. Професійна діагностика, ремонт та обслуговування — швидко та якісно.",
     hero_cta_book: "Записатися на прийом",
     hero_cta_directions: "Прокласти маршрут",
     hero_tag_quality: "Гарантія якості",

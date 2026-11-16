@@ -9,7 +9,6 @@ import { config } from '../config.js';
 import { initI18n, getCurrentLang, getTranslations, setLanguage } from './modules/i18n.js';
 import { initStatus, getGarageStatus, updateGarageStatus } from './modules/status.js';
 import { initSchedule, renderHoursTable, renderTodayHours, getTodayHoursText } from './modules/schedule.js';
-import { initBookings } from './modules/bookings.js';
 import { initMap, initNavigationButtons, initAddressCopy } from './modules/map.js';
 import { initNavigation } from './modules/navigation.js';
 import { initNotice, updateNotice, showNotice, hideNotice } from './modules/notice.js';
@@ -46,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initAddressCopy(config);
   initNavigationButtons(config);
-  initBookings(config);
   initMap(config);
   initSwiper();
   setLanguage(getCurrentLang());
