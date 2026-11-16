@@ -97,7 +97,7 @@
   transform: translateY(-1px);
 }
 
-.btn-call-header__icon, .mobile-action-btn__icon {
+.btn-call-header__icon, .mobile-action-bar__btn-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
